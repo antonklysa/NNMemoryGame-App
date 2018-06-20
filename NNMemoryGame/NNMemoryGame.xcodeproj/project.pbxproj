@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A5A8CEA20D8D9BC008643DB /* package_json.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A5A8CE920D8D9BC008643DB /* package_json.json */; };
-		3A5A8CED20D976FC008643DB /* YouDecideN-Layer_Four.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A5A8CEC20D976FC008643DB /* YouDecideN-Layer_Four.ttf */; };
 		3AA1EE8520D8147700CD4C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EE8420D8147700CD4C2E /* AppDelegate.swift */; };
 		3AA1EE8A20D8147700CD4C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1EE8820D8147700CD4C2E /* Main.storyboard */; };
 		3AA1EE8C20D8147800CD4C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1EE8B20D8147800CD4C2E /* Assets.xcassets */; };
@@ -18,6 +17,8 @@
 		3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EE9E20D817E400CD4C2E /* CardCollectionViewCell.swift */; };
 		3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA120D8185C00CD4C2E /* Card.swift */; };
 		3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */; };
+		6B137F3420DA984600F3F289 /* YouDecideN-Layer_Four.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */; };
+		6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +26,6 @@
 		18A29B5AFFA327486F26ED89 /* Pods-NNMemoryGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNMemoryGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNMemoryGame/Pods-NNMemoryGame.release.xcconfig"; sourceTree = "<group>"; };
 		2B076B6813B0E40116A78CA7 /* Pods-NNMemoryGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNMemoryGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNMemoryGame/Pods-NNMemoryGame.debug.xcconfig"; sourceTree = "<group>"; };
 		3A5A8CE920D8D9BC008643DB /* package_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package_json.json; sourceTree = "<group>"; };
-		3A5A8CEC20D976FC008643DB /* YouDecideN-Layer_Four.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YouDecideN-Layer_Four.ttf"; path = "../../../../../../Desktop/YouDecideN-Layer_Four.ttf"; sourceTree = "<group>"; };
 		3AA1EE8120D8147700CD4C2E /* NNMemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNMemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA1EE8420D8147700CD4C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AA1EE8920D8147700CD4C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +37,8 @@
 		3AA1EE9E20D817E400CD4C2E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		3AA1EEA120D8185C00CD4C2E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YouDecideN-Layer_Four.ttf"; sourceTree = "<group>"; };
+		6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,18 +57,10 @@
 		3A5A8CE620D8D94F008643DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */,
 				3A5A8CE920D8D9BC008643DB /* package_json.json */,
-				3A5A8CEB20D976F0008643DB /* Fonts */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		3A5A8CEB20D976F0008643DB /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				3A5A8CEC20D976FC008643DB /* YouDecideN-Layer_Four.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3AA1EE7820D8147700CD4C2E = {
@@ -92,8 +86,6 @@
 			children = (
 				3AA1EE8420D8147700CD4C2E /* AppDelegate.swift */,
 				3AA1EE9620D8159100CD4C2E /* ViewControllers */,
-				3AA1EE9D20D817CF00CD4C2E /* Cells */,
-				3AA1EEA020D8184C00CD4C2E /* Models */,
 				3AA1EEA420D819C400CD4C2E /* Controllers */,
 				3A5A8CE620D8D94F008643DB /* Resources */,
 				3AA1EE8820D8147700CD4C2E /* Main.storyboard */,
@@ -108,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA1EE9720D8159C00CD4C2E /* Base */,
+				6B137F5220DAAE0300F3F289 /* Language */,
 				3AA1EE9A20D8161200CD4C2E /* MemoryGame */,
 			);
 			path = ViewControllers;
@@ -124,6 +117,8 @@
 		3AA1EE9A20D8161200CD4C2E /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				3AA1EEA020D8184C00CD4C2E /* Models */,
+				3AA1EE9D20D817CF00CD4C2E /* Cells */,
 				3AA1EE9B20D8164100CD4C2E /* MemoryGameViewController.swift */,
 			);
 			path = MemoryGame;
@@ -167,6 +162,14 @@
 				9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B137F5220DAAE0300F3F289 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 		842D8298C3E3AE26CE11139B /* Pods */ = {
@@ -242,7 +245,7 @@
 				3AA1EE8C20D8147800CD4C2E /* Assets.xcassets in Resources */,
 				3AA1EE8A20D8147700CD4C2E /* Main.storyboard in Resources */,
 				3A5A8CEA20D8D9BC008643DB /* package_json.json in Resources */,
-				3A5A8CED20D976FC008643DB /* YouDecideN-Layer_Four.ttf in Resources */,
+				6B137F3420DA984600F3F289 /* YouDecideN-Layer_Four.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +297,7 @@
 			files = (
 				3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */,
 				3AA1EE8520D8147700CD4C2E /* AppDelegate.swift in Sources */,
+				6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */,
 				3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */,
 				3AA1EE9C20D8164100CD4C2E /* MemoryGameViewController.swift in Sources */,
 				3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */,

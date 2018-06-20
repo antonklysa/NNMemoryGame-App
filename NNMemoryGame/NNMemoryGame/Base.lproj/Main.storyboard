@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,6 +15,44 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Choose Language View Controller-->
+        <scene sceneID="8Rx-jy-BlU">
+            <objects>
+                <viewController storyboardIdentifier="ChooseLanguageViewController" id="xEx-BQ-Jy3" customClass="ChooseLanguageViewController" customModule="NNMemoryGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpt-s6-cBU">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKx-4o-s1z">
+                                <rect key="frame" x="230" y="528" width="202" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="french_btn"/>
+                                <connections>
+                                    <action selector="frenchButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="zBc-Lu-Exb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-Yw-49m">
+                                <rect key="frame" x="592" y="528" width="202" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arabic_btn"/>
+                                <connections>
+                                    <action selector="arabicButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="dUE-rC-vAP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="choose_language_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mwT-o8-R0b">
+                                <rect key="frame" x="213" y="61" width="599" height="407"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CwD-dD-byx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="il9-Eu-7OW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXv-ge-Hn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.8203125" y="60.9375"/>
+        </scene>
         <!--Memory Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -134,11 +172,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.984375" y="35.9375"/>
+            <point key="canvasLocation" x="631.640625" y="60.9375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arabic_btn" width="202" height="65"/>
+        <image name="choose_language_logo" width="457" height="420"/>
         <image name="fr_counter" width="60" height="24"/>
         <image name="fr_title" width="821" height="43"/>
+        <image name="french_btn" width="202" height="65"/>
     </resources>
 </document>

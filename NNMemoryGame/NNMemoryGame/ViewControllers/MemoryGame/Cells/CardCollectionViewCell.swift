@@ -43,7 +43,7 @@ class CardCollectionViewCell: UICollectionViewCell {
             newImage.image = UIImage.init(named: CardCollectionViewCell.closedStringImageName)
         }
         
-        UIView.transition(from: currentImage, to: newImage, duration: 0.5, options: options) { (bool) in
+        UIView.transition(from: currentImage, to: newImage, duration: 0.3, options: options) { (bool) in
             if completionHandler != nil {
                 completionHandler!(bool)
             }
