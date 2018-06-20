@@ -74,42 +74,46 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         UIApplication.shared.beginIgnoringInteractionEvents()
         let selectedCell: CardCollectionViewCell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
-        if firstSelectedCell == nil {
-            firstSelectedCell = selectedCell
-        }
-        
         if selectedArray.contains(where: { (card) -> Bool in
             return card.addressHeap(o: card) == selectedCell.cardModel.addressHeap(o: selectedCell.cardModel)
         }) {
             UIApplication.shared.endIgnoringInteractionEvents()
             return
-        } else {
-            selectedCell.flip(onCellState: .open) { [weak self] (bool) in
-                self?.selectedArray.append(selectedCell.cardModel)
-                
-                if (self?.selectedArray.count)! % 2 == 0 {
-                    let filteredArray: [Card] = (self?.selectedArray.filter { (card) -> Bool in
-                        return card.group_id == selectedCell.cardModel.group_id
-                        })!
-                    if filteredArray.count != 2 {
-                        selectedCell.flip(onCellState: .close) {(bool) in
-                            if bool {
-                                self?.selectedArray.removeLast()
-                                self?.firstSelectedCell?.flip(onCellState: .close, completionHandler: { (bool) in
-                                    self?.selectedArray.removeLast()
-                                    self?.firstSelectedCell = nil
-                                    UIApplication.shared.endIgnoringInteractionEvents()
-                                })
-                                
-                            }
+        }
+        
+        if firstSelectedCell == nil {
+            firstSelectedCell = selectedCell
+        }
+        
+        selectedCell.flip(onCellState: .open) { [weak self] (bool) in
+            self?.selectedArray.append(selectedCell.cardModel)
+            
+            if (self?.selectedArray.count)! % 2 == 0 {
+                let filteredArray: [Card] = (self?.selectedArray.filter { (card) -> Bool in
+                    return card.group_id == selectedCell.cardModel.group_id
+                    })!
+                if filteredArray.count != 2 {
+                    selectedCell.flip(onCellState: .close) {(bool) in
+                        if bool {
+                            //remove second selected cell
+                            self?.selectedArray.removeLast()
+                            UIApplication.shared.endIgnoringInteractionEvents()
                         }
-                    } else {
-                        self?.firstSelectedCell = nil
-                        UIApplication.shared.endIgnoringInteractionEvents()
+                    }
+                    self?.firstSelectedCell?.flip(onCellState: .close) { (bool) in
+                        if bool {
+                            //remove first selected cell
+                            self?.selectedArray.removeLast()
+                            self?.firstSelectedCell = nil
+                            UIApplication.shared.endIgnoringInteractionEvents()
+                        }
                     }
                 } else {
+                    self?.firstSelectedCell = nil
                     UIApplication.shared.endIgnoringInteractionEvents()
                 }
+            } else {
+                UIApplication.shared.endIgnoringInteractionEvents()
             }
         }
         
