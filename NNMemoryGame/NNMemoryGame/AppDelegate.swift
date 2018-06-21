@@ -14,15 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        self.window!.rootViewController = UINavigationController.init(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ChooseLanguageViewController.self)))
-        //        self.window!.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: WinViewController.self))
-        
-        self.window?.makeKeyAndVisible()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
+        let shouldLogin : Bool = PMISessionManager.defaultManager.hostessId == nil
+        if (shouldLogin) {
+            self.window!.rootViewController = UIStoryboard.giftManagmentStoryBoard().instantiateViewController(withIdentifier: "LoginViewController")
+        } else {
+            self.window!.rootViewController = UINavigationController(rootViewController: UIStoryboard.giftManagmentStoryBoard().instantiateViewController(withIdentifier: "SelectDifficultyViewController"))
+        }
         
         return true
     }
