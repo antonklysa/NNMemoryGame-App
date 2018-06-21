@@ -111,15 +111,13 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
                 } else {
                     self?.firstSelectedCell = nil
                     UIApplication.shared.endIgnoringInteractionEvents()
+                    if self?.selectedArray.count == self?.collectionViewDataSourceArray.count {
+                        self?.winAction()
+                    }
                 }
             } else {
                 UIApplication.shared.endIgnoringInteractionEvents()
             }
-        }
-        
-        if selectedArray.count == collectionViewDataSourceArray.count {
-            UIApplication.shared.endIgnoringInteractionEvents()
-            winAction()
         }
     }
     
@@ -137,7 +135,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     private func winAction() {
-
+        print(" - - - - - - - -win - - -- - - -- - - ")
     }
     
     private func loseAction() {
