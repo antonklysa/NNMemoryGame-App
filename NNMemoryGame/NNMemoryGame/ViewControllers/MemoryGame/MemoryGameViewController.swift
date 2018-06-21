@@ -12,6 +12,7 @@ import Mantle
 
 class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var timer: Timer!
     static private var seconds: Int = 60
     
     @IBOutlet private weak var topContainerView: UIView!
@@ -19,6 +20,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     @IBOutlet private weak var counterImageView: UIImageView!
     @IBOutlet private weak var counterValueLabel: UILabel!
     @IBOutlet private weak var titleImageView: UIImageView!
+    @IBOutlet weak var titleImageViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -39,6 +41,8 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
             topCounterContainerView.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.semanticContentAttribute = .forceRightToLeft
         }
+        
+        self.collectionView.alpha = 0.0
         
         counterValueLabel.text = LocalizationManagers.isArabic() ? "\((MemoryGameViewController.seconds)) :" : ": \((MemoryGameViewController.seconds))"
         topCounterContainerView.layer.cornerRadius = 5
@@ -64,8 +68,21 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         collectionView.collectionViewLayout = layout
         collectionView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        beginTimeAction()
+        self.titleImageViewTopConstraint.constant = 55.0
+        UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        }) { (flag) in
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+                self.collectionView.alpha = 1.0
+            }, completion: { (flag) in
+                self.beginTimeAction()
+            })
+        }
     }
     
     //MARK: actions
@@ -124,24 +141,39 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     private func beginTimeAction() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
-                MemoryGameViewController.seconds -= 1
-                self?.counterValueLabel.text = LocalizationManagers.isArabic() ? "\((MemoryGameViewController.seconds)) :" : ": \((MemoryGameViewController.seconds))"
-                if MemoryGameViewController.seconds == 0 {
-                    timer.invalidate()
-                    self?.loseAction()
-                }
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
+            MemoryGameViewController.seconds -= 1
+            self?.counterValueLabel.text = LocalizationManagers.isArabic() ? "\((MemoryGameViewController.seconds)) :" : ": \((MemoryGameViewController.seconds))"
+            if MemoryGameViewController.seconds == 0 {
+                timer.invalidate()
+                self?.loseAction()
             }
         }
     }
     
     private func winAction() {
-
+        self.timer.invalidate()
+        
+        let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     private func loseAction() {
+        self.timer.invalidate()
         
+        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
+        
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     //MARK: UICollectionViewDelegate

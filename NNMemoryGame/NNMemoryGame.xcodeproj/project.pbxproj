@@ -53,7 +53,9 @@
 		6B031AF220DC13BD00A04F77 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */; };
 		6B031AF620DC14F300A04F77 /* PMI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AF320DC14F200A04F77 /* PMI.xcdatamodeld */; };
 		6B031AF720DC14F300A04F77 /* PMIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AF520DC14F200A04F77 /* PMIDataSource.swift */; };
-		6B137F3420DA984600F3F289 /* YouDecideN-Layer_Four.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */; };
+		6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */; };
+		6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */; };
+		6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFD20DC192E00A04F77 /* LoseViewController.swift */; };
 		6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
@@ -109,7 +111,9 @@
 		6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		6B031AF420DC14F200A04F77 /* PMI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PMI.xcdatamodel; sourceTree = "<group>"; };
 		6B031AF520DC14F200A04F77 /* PMIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PMIDataSource.swift; path = ../../../../../Authentic122/Authentic122/Controllers/Datasource/PMIDataSource.swift; sourceTree = "<group>"; };
-		6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YouDecideN-Layer_Four.ttf"; sourceTree = "<group>"; };
+		6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YouDecideN-LayerOne.ttf"; sourceTree = "<group>"; };
+		6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinTextViewController.swift; sourceTree = "<group>"; };
+		6B031AFD20DC192E00A04F77 /* LoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */,
-				6B137F3320DA984600F3F289 /* YouDecideN-Layer_Four.ttf */,
+				6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */,
 				3A5A8CE920D8D9BC008643DB /* package_json.json */,
 			);
 			path = Resources;
@@ -162,7 +166,6 @@
 				3AA1EE9620D8159100CD4C2E /* ViewControllers */,
 				3AA1EEA420D819C400CD4C2E /* Controllers */,
 				3A5A8CE620D8D94F008643DB /* Resources */,
-				3AA1EE8820D8147700CD4C2E /* Main.storyboard */,
 				3AA1EE8B20D8147800CD4C2E /* Assets.xcassets */,
 				3AA1EE8D20D8147800CD4C2E /* LaunchScreen.storyboard */,
 				3AA1EE9020D8147800CD4C2E /* Info.plist */,
@@ -173,9 +176,12 @@
 		3AA1EE9620D8159100CD4C2E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3AA1EE8820D8147700CD4C2E /* Main.storyboard */,
 				3AA1EE9720D8159C00CD4C2E /* Base */,
 				6B137F5220DAAE0300F3F289 /* Language */,
 				3AA1EE9A20D8161200CD4C2E /* MemoryGame */,
+				6B031AFC20DC192E00A04F77 /* Lose  */,
+				6B031AFA20DC192E00A04F77 /* Win Text */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -360,6 +366,22 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		6B031AFA20DC192E00A04F77 /* Win Text */ = {
+			isa = PBXGroup;
+			children = (
+				6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */,
+			);
+			path = "Win Text";
+			sourceTree = "<group>";
+		};
+		6B031AFC20DC192E00A04F77 /* Lose  */ = {
+			isa = PBXGroup;
+			children = (
+				6B031AFD20DC192E00A04F77 /* LoseViewController.swift */,
+			);
+			path = "Lose ";
+			sourceTree = "<group>";
+		};
 		6B137F5220DAAE0300F3F289 /* Language */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,12 +459,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */,
 				3AA1EE8F20D8147800CD4C2E /* LaunchScreen.storyboard in Resources */,
 				3AA1EE8C20D8147800CD4C2E /* Assets.xcassets in Resources */,
 				6B031AC320DC138900A04F77 /* HostessManagment.storyboard in Resources */,
 				3AA1EE8A20D8147700CD4C2E /* Main.storyboard in Resources */,
 				3A5A8CEA20D8D9BC008643DB /* package_json.json in Resources */,
-				6B137F3420DA984600F3F289 /* YouDecideN-Layer_Four.ttf in Resources */,
 				6B031AF220DC13BD00A04F77 /* MyriadPro-Bold.otf in Resources */,
 				6B031AC220DC138900A04F77 /* gift.png in Resources */,
 			);
@@ -527,7 +549,9 @@
 				3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */,
 				6B031ADF20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift in Sources */,
 				6B031ABD20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift in Sources */,
+				6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */,
 				3AA1EE9C20D8164100CD4C2E /* MemoryGameViewController.swift in Sources */,
+				6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */,
 				6B031AE020DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift in Sources */,
 				6B031ABA20DC138900A04F77 /* ConfigurationViewController.swift in Sources */,
 				6B031AC420DC138900A04F77 /* Storyboard+Extensions.swift in Sources */,

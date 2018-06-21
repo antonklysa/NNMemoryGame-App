@@ -14,14 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
         let shouldLogin : Bool = PMISessionManager.defaultManager.hostessId == nil
         if (shouldLogin) {
             self.window!.rootViewController = UIStoryboard.giftManagmentStoryBoard().instantiateViewController(withIdentifier: "LoginViewController")
         } else {
             self.window!.rootViewController = UINavigationController(rootViewController: UIStoryboard.giftManagmentStoryBoard().instantiateViewController(withIdentifier: "SelectDifficultyViewController"))
         }
+
+//        self.window!.rootViewController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MemoryGameViewController"))
         
+        self.window?.makeKeyAndVisible()
+    
         return true
     }
 

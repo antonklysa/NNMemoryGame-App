@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="YouDecideN-Layer_Four.ttf">
-            <string>YouDecideN-LayerFour</string>
+        <array key="YouDecideN-LayerOne.ttf">
+            <string>YouDecideN-LayerOne</string>
         </array>
     </customFonts>
     <scenes>
@@ -43,6 +43,11 @@
                                 <rect key="frame" x="213" y="61" width="599" height="407"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-QS-55r">
+                                <rect key="frame" x="13" y="28" width="66" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back_btn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CwD-dD-byx"/>
@@ -68,8 +73,8 @@
                                         <rect key="frame" x="40" y="20" width="110" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-bc-zFC">
-                                                <rect key="frame" x="68" y="6.5" width="37" height="26"/>
-                                                <fontDescription key="fontDescription" name="YouDecideN-LayerFour" family="YouDecide N" pointSize="26"/>
+                                                <rect key="frame" x="68" y="7" width="37" height="26"/>
+                                                <fontDescription key="fontDescription" name="YouDecideN-LayerOne" family="YouDecide N" pointSize="26"/>
                                                 <color key="textColor" red="0.68235294117647061" green="0.21568627450980393" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -144,18 +149,18 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Geb-Wa-Xj0"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fr_title" translatesAutoresizingMaskIntoConstraints="NO" id="YP5-NP-gYY">
-                                <rect key="frame" x="101.5" y="131" width="821" height="43"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fr_title" translatesAutoresizingMaskIntoConstraints="NO" id="YP5-NP-gYY">
+                                <rect key="frame" x="102" y="105" width="821" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YP5-NP-gYY" firstAttribute="top" secondItem="loM-is-FeJ" secondAttribute="bottom" constant="265" id="4Xk-gx-EhC"/>
                             <constraint firstItem="YP5-NP-gYY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Phf-5C-TSs"/>
                             <constraint firstItem="loM-is-FeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qxs-li-Yft"/>
                             <constraint firstItem="36m-0q-HyN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Re2-j7-r9F"/>
                             <constraint firstItem="loM-is-FeJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yi2-76-vRW"/>
-                            <constraint firstItem="36m-0q-HyN" firstAttribute="top" secondItem="YP5-NP-gYY" secondAttribute="bottom" constant="70" id="b3I-HJ-27R"/>
                             <constraint firstItem="loM-is-FeJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d8i-EN-R2A"/>
                             <constraint firstItem="36m-0q-HyN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="50" id="lyj-FI-fHv"/>
                         </constraints>
@@ -166,6 +171,7 @@
                         <outlet property="counterImageView" destination="Lg0-cL-Xu9" id="n0i-QI-pLR"/>
                         <outlet property="counterValueLabel" destination="9n4-bc-zFC" id="pqf-4I-7IY"/>
                         <outlet property="titleImageView" destination="YP5-NP-gYY" id="M7d-YE-o8J"/>
+                        <outlet property="titleImageViewTopConstraint" destination="4Xk-gx-EhC" id="V2m-UM-Bl1"/>
                         <outlet property="topContainerView" destination="loM-is-FeJ" id="TQZ-Tu-U7W"/>
                         <outlet property="topCounterContainerView" destination="9Ze-gR-EWL" id="UFH-6b-F8I"/>
                     </connections>
@@ -174,12 +180,156 @@
             </objects>
             <point key="canvasLocation" x="631.640625" y="60.9375"/>
         </scene>
+        <!--Lose View Controller-->
+        <scene sceneID="bZJ-Qw-lRp">
+            <objects>
+                <viewController storyboardIdentifier="LoseViewController_ar" id="CEf-H1-VkM" customClass="LoseViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31c-h8-DSD">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="M70-cy-VkI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arv-sc-6ma">
+                                <rect key="frame" x="423" y="529" width="179" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lose_done_btn_ar"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="CEf-H1-VkM" eventType="touchUpInside" id="ktq-Cg-1Gz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lose_message_ar" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-Gv-rs7">
+                                <rect key="frame" x="224" y="262" width="577" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M70-cy-VkI" firstAttribute="leading" secondItem="E4T-oD-BEe" secondAttribute="leading" id="AZ1-N1-Iyu"/>
+                            <constraint firstItem="M70-cy-VkI" firstAttribute="trailing" secondItem="E4T-oD-BEe" secondAttribute="trailing" id="QXf-Z5-vgQ"/>
+                            <constraint firstItem="M70-cy-VkI" firstAttribute="top" secondItem="31c-h8-DSD" secondAttribute="top" id="Rwo-fT-54T"/>
+                            <constraint firstItem="M70-cy-VkI" firstAttribute="bottom" secondItem="E4T-oD-BEe" secondAttribute="bottom" id="xGK-A1-g5k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E4T-oD-BEe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yec-PR-Mhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418.5546875" y="650"/>
+        </scene>
+        <!--Win Text View Controller-->
+        <scene sceneID="Wtd-bf-6zs">
+            <objects>
+                <viewController storyboardIdentifier="WinTextViewController_ar" id="7wV-P1-Ig0" customClass="WinTextViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ApP-tn-3M0">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="P1F-2X-aqM">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win_message_text_ar" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-hc-iRj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P1F-2X-aqM" firstAttribute="trailing" secondItem="F51-Cg-NwI" secondAttribute="trailing" id="4sW-dg-nKk"/>
+                            <constraint firstItem="P1F-2X-aqM" firstAttribute="bottom" secondItem="F51-Cg-NwI" secondAttribute="bottom" id="9IM-iK-aiB"/>
+                            <constraint firstItem="P1F-2X-aqM" firstAttribute="leading" secondItem="F51-Cg-NwI" secondAttribute="leading" id="X2M-v9-Lvu"/>
+                            <constraint firstItem="P1F-2X-aqM" firstAttribute="top" secondItem="ApP-tn-3M0" secondAttribute="top" id="hAh-Va-V1w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F51-Cg-NwI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txG-6s-xHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111.71875" y="650"/>
+        </scene>
+        <!--Lose View Controller-->
+        <scene sceneID="aR5-6k-bVF">
+            <objects>
+                <viewController storyboardIdentifier="LoseViewController_fr" id="3Oc-wV-eKF" customClass="LoseViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivB-ut-D37">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6bJ-s2-15t">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-l5-NHa">
+                                <rect key="frame" x="423" y="530" width="179" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="lose_done_btn_fr"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="3Oc-wV-eKF" eventType="touchUpInside" id="iQC-Uw-RJc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lose_message_fr" translatesAutoresizingMaskIntoConstraints="NO" id="Vza-oy-XGw">
+                                <rect key="frame" x="224" y="257" width="577" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6bJ-s2-15t" firstAttribute="top" secondItem="ivB-ut-D37" secondAttribute="top" id="76n-lO-Ha3"/>
+                            <constraint firstItem="6bJ-s2-15t" firstAttribute="leading" secondItem="SRw-WF-wOE" secondAttribute="leading" id="Gju-Is-92S"/>
+                            <constraint firstItem="6bJ-s2-15t" firstAttribute="bottom" secondItem="SRw-WF-wOE" secondAttribute="bottom" id="XcL-PG-QDk"/>
+                            <constraint firstItem="6bJ-s2-15t" firstAttribute="trailing" secondItem="SRw-WF-wOE" secondAttribute="trailing" id="rrq-CA-I8n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SRw-WF-wOE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yh-83-UtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1419" y="-113"/>
+        </scene>
+        <!--Win Text View Controller-->
+        <scene sceneID="BVG-d6-g68">
+            <objects>
+                <viewController storyboardIdentifier="WinTextViewController_fr" id="PWw-tn-Fsy" customClass="WinTextViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DU0-Rq-asy">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="suN-BU-RRk">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win_message_text_fr" translatesAutoresizingMaskIntoConstraints="NO" id="94C-Tv-DTS">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="suN-BU-RRk" firstAttribute="leading" secondItem="396-eK-zqG" secondAttribute="leading" id="bMK-kb-jLL"/>
+                            <constraint firstItem="suN-BU-RRk" firstAttribute="trailing" secondItem="396-eK-zqG" secondAttribute="trailing" id="geK-IP-CGr"/>
+                            <constraint firstItem="suN-BU-RRk" firstAttribute="bottom" secondItem="396-eK-zqG" secondAttribute="bottom" id="rS5-Yp-zj8"/>
+                            <constraint firstItem="suN-BU-RRk" firstAttribute="top" secondItem="DU0-Rq-asy" secondAttribute="top" id="tUr-zd-KGb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="396-eK-zqG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40g-us-RD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111.71875" y="-113.28125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arabic_btn" width="202" height="65"/>
+        <image name="back_btn" width="31" height="22"/>
+        <image name="background" width="16" height="16"/>
         <image name="choose_language_logo" width="457" height="420"/>
         <image name="fr_counter" width="60" height="24"/>
         <image name="fr_title" width="821" height="43"/>
         <image name="french_btn" width="202" height="65"/>
+        <image name="lose_done_btn_ar" width="16" height="16"/>
+        <image name="lose_done_btn_fr" width="16" height="16"/>
+        <image name="lose_message_ar" width="16" height="16"/>
+        <image name="lose_message_fr" width="16" height="16"/>
+        <image name="win_message_text_ar" width="16" height="16"/>
+        <image name="win_message_text_fr" width="16" height="16"/>
     </resources>
 </document>
