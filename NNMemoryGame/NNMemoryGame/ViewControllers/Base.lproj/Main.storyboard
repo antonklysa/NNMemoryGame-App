@@ -47,6 +47,9 @@
                                 <rect key="frame" x="13" y="28" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back_btn"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="8i6-iY-c0q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,7 +76,7 @@
                                         <rect key="frame" x="40" y="20" width="110" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-bc-zFC">
-                                                <rect key="frame" x="68" y="7" width="37" height="26"/>
+                                                <rect key="frame" x="68" y="7.5" width="37" height="26"/>
                                                 <fontDescription key="fontDescription" name="YouDecideN-LayerOne" family="YouDecide N" pointSize="26"/>
                                                 <color key="textColor" red="0.68235294117647061" green="0.21568627450980393" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -183,7 +186,7 @@
         <!--Lose View Controller-->
         <scene sceneID="bZJ-Qw-lRp">
             <objects>
-                <viewController storyboardIdentifier="LoseViewController_ar" id="CEf-H1-VkM" customClass="LoseViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoseViewController_ar" id="CEf-H1-VkM" customClass="LoseViewController" customModule="NNMemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="31c-h8-DSD">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,7 +224,7 @@
         <!--Win Text View Controller-->
         <scene sceneID="Wtd-bf-6zs">
             <objects>
-                <viewController storyboardIdentifier="WinTextViewController_ar" id="7wV-P1-Ig0" customClass="WinTextViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WinTextViewController_ar" id="7wV-P1-Ig0" customClass="WinTextViewController" customModule="NNMemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ApP-tn-3M0">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,7 +254,7 @@
         <!--Lose View Controller-->
         <scene sceneID="aR5-6k-bVF">
             <objects>
-                <viewController storyboardIdentifier="LoseViewController_fr" id="3Oc-wV-eKF" customClass="LoseViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoseViewController_fr" id="3Oc-wV-eKF" customClass="LoseViewController" customModule="NNMemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ivB-ut-D37">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +292,7 @@
         <!--Win Text View Controller-->
         <scene sceneID="BVG-d6-g68">
             <objects>
-                <viewController storyboardIdentifier="WinTextViewController_fr" id="PWw-tn-Fsy" customClass="WinTextViewController" customModule="NNGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WinTextViewController_fr" id="PWw-tn-Fsy" customClass="WinTextViewController" customModule="NNMemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DU0-Rq-asy">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,16 +323,16 @@
     <resources>
         <image name="arabic_btn" width="202" height="65"/>
         <image name="back_btn" width="31" height="22"/>
-        <image name="background" width="16" height="16"/>
+        <image name="background" width="1024" height="768"/>
         <image name="choose_language_logo" width="457" height="420"/>
         <image name="fr_counter" width="60" height="24"/>
         <image name="fr_title" width="821" height="43"/>
         <image name="french_btn" width="202" height="65"/>
-        <image name="lose_done_btn_ar" width="16" height="16"/>
-        <image name="lose_done_btn_fr" width="16" height="16"/>
-        <image name="lose_message_ar" width="16" height="16"/>
-        <image name="lose_message_fr" width="16" height="16"/>
-        <image name="win_message_text_ar" width="16" height="16"/>
-        <image name="win_message_text_fr" width="16" height="16"/>
+        <image name="lose_done_btn_ar" width="179" height="58"/>
+        <image name="lose_done_btn_fr" width="179" height="57"/>
+        <image name="lose_message_ar" width="517" height="100"/>
+        <image name="lose_message_fr" width="529" height="81"/>
+        <image name="win_message_text_ar" width="1024" height="768"/>
+        <image name="win_message_text_fr" width="1024" height="768"/>
     </resources>
 </document>

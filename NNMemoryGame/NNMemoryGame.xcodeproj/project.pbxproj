@@ -17,46 +17,46 @@
 		3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EE9E20D817E400CD4C2E /* CardCollectionViewCell.swift */; };
 		3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA120D8185C00CD4C2E /* Card.swift */; };
 		3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */; };
-		6B031AB920DC138900A04F77 /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AA620DC138900A04F77 /* GiftTableViewCell.swift */; };
-		6B031ABA20DC138900A04F77 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AA720DC138900A04F77 /* ConfigurationViewController.swift */; };
-		6B031ABB20DC138900A04F77 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AA820DC138900A04F77 /* ChannelTableViewCell.swift */; };
-		6B031ABC20DC138900A04F77 /* DistributedGiftsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AA920DC138900A04F77 /* DistributedGiftsHistoryViewController.swift */; };
-		6B031ABD20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AAB20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift */; };
-		6B031ABE20DC138900A04F77 /* SelectDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AAC20DC138900A04F77 /* SelectDifficultyViewController.swift */; };
-		6B031ABF20DC138900A04F77 /* ScratchUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AAF20DC138900A04F77 /* ScratchUIView.swift */; };
-		6B031AC020DC138900A04F77 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AB020DC138900A04F77 /* ScratchView.swift */; };
-		6B031AC120DC138900A04F77 /* ScratchGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AB120DC138900A04F77 /* ScratchGiftViewController.swift */; };
-		6B031AC220DC138900A04F77 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AB220DC138900A04F77 /* gift.png */; };
-		6B031AC320DC138900A04F77 /* HostessManagment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AB320DC138900A04F77 /* HostessManagment.storyboard */; };
-		6B031AC420DC138900A04F77 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AB520DC138900A04F77 /* Storyboard+Extensions.swift */; };
-		6B031AC520DC138900A04F77 /* UIAlertViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AB620DC138900A04F77 /* UIAlertViewController+Extensions.swift */; };
-		6B031AC620DC138900A04F77 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AB820DC138900A04F77 /* LoginViewController.swift */; };
-		6B031ADE20DC13AF00A04F77 /* AppearanceTheme+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AC920DC13AF00A04F77 /* AppearanceTheme+CoreDataProperties.swift */; };
-		6B031ADF20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACA20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift */; };
-		6B031AE020DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACB20DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift */; };
-		6B031AE120DC13AF00A04F77 /* Gift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACC20DC13AF00A04F77 /* Gift+CoreDataClass.swift */; };
-		6B031AE220DC13AF00A04F77 /* Campaign+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACD20DC13AF00A04F77 /* Campaign+CoreDataClass.swift */; };
-		6B031AE320DC13AF00A04F77 /* Scenario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACE20DC13AF00A04F77 /* Scenario+CoreDataClass.swift */; };
-		6B031AE420DC13AF00A04F77 /* AppearanceTheme+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ACF20DC13AF00A04F77 /* AppearanceTheme+CoreDataClass.swift */; };
-		6B031AE520DC13AF00A04F77 /* Gift+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD020DC13AF00A04F77 /* Gift+CoreDataProperties.swift */; };
-		6B031AE620DC13AF00A04F77 /* Campaign+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD120DC13AF00A04F77 /* Campaign+CoreDataProperties.swift */; };
-		6B031AE720DC13AF00A04F77 /* GiftScenario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD220DC13AF00A04F77 /* GiftScenario+CoreDataProperties.swift */; };
-		6B031AE820DC13AF00A04F77 /* Gift+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD420DC13AF00A04F77 /* Gift+DictionaryInitializer.swift */; };
-		6B031AE920DC13AF00A04F77 /* Scenario+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD520DC13AF00A04F77 /* Scenario+DictionaryInitializer.swift */; };
-		6B031AEA20DC13AF00A04F77 /* Scenario+Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD620DC13AF00A04F77 /* Scenario+Gift.swift */; };
-		6B031AEB20DC13AF00A04F77 /* GiftScenario+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD720DC13AF00A04F77 /* GiftScenario+DictionaryInitializer.swift */; };
-		6B031AEC20DC13AF00A04F77 /* AppearanceTheme+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD820DC13AF00A04F77 /* AppearanceTheme+CoreDataExtensions.swift */; };
-		6B031AED20DC13AF00A04F77 /* Campaign+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AD920DC13AF00A04F77 /* Campaign+CoreDataExtensions.swift */; };
-		6B031AEE20DC13AF00A04F77 /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ADB20DC13AF00A04F77 /* DownloadImageOperation.swift */; };
-		6B031AEF20DC13AF00A04F77 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ADC20DC13AF00A04F77 /* String+Extensions.swift */; };
-		6B031AF020DC13AF00A04F77 /* PMISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031ADD20DC13AF00A04F77 /* PMISessionManager.swift */; };
 		6B031AF220DC13BD00A04F77 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */; };
-		6B031AF620DC14F300A04F77 /* PMI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AF320DC14F200A04F77 /* PMI.xcdatamodeld */; };
-		6B031AF720DC14F300A04F77 /* PMIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AF520DC14F200A04F77 /* PMIDataSource.swift */; };
 		6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */; };
 		6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */; };
 		6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFD20DC192E00A04F77 /* LoseViewController.swift */; };
 		6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */; };
+		6BF1C44C20DD32E3000AB15C /* GiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C41F20DD32E2000AB15C /* GiftTableViewCell.swift */; };
+		6BF1C44D20DD32E3000AB15C /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42020DD32E2000AB15C /* ConfigurationViewController.swift */; };
+		6BF1C44E20DD32E3000AB15C /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42120DD32E2000AB15C /* ChannelTableViewCell.swift */; };
+		6BF1C44F20DD32E3000AB15C /* DistributedGiftsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42220DD32E2000AB15C /* DistributedGiftsHistoryViewController.swift */; };
+		6BF1C45020DD32E3000AB15C /* SelectDifficultyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42420DD32E2000AB15C /* SelectDifficultyCollectionViewCell.swift */; };
+		6BF1C45120DD32E3000AB15C /* SelectDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42520DD32E2000AB15C /* SelectDifficultyViewController.swift */; };
+		6BF1C45220DD32E3000AB15C /* ScratchUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42820DD32E2000AB15C /* ScratchUIView.swift */; };
+		6BF1C45320DD32E3000AB15C /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42920DD32E2000AB15C /* ScratchView.swift */; };
+		6BF1C45420DD32E3000AB15C /* ScratchGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42A20DD32E2000AB15C /* ScratchGiftViewController.swift */; };
+		6BF1C45520DD32E3000AB15C /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF1C42B20DD32E2000AB15C /* gift.png */; };
+		6BF1C45620DD32E3000AB15C /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42D20DD32E2000AB15C /* DownloadImageOperation.swift */; };
+		6BF1C45720DD32E3000AB15C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42E20DD32E2000AB15C /* String+Extensions.swift */; };
+		6BF1C45820DD32E3000AB15C /* PMISessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C42F20DD32E2000AB15C /* PMISessionManager.swift */; };
+		6BF1C45920DD32E3000AB15C /* HostessManagment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF1C43020DD32E2000AB15C /* HostessManagment.storyboard */; };
+		6BF1C45A20DD32E3000AB15C /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43220DD32E2000AB15C /* Storyboard+Extensions.swift */; };
+		6BF1C45B20DD32E3000AB15C /* UIAlertViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43320DD32E2000AB15C /* UIAlertViewController+Extensions.swift */; };
+		6BF1C45C20DD32E3000AB15C /* AppearanceTheme+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43620DD32E2000AB15C /* AppearanceTheme+CoreDataProperties.swift */; };
+		6BF1C45D20DD32E3000AB15C /* Scenario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43720DD32E2000AB15C /* Scenario+CoreDataProperties.swift */; };
+		6BF1C45E20DD32E3000AB15C /* GiftScenario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43820DD32E2000AB15C /* GiftScenario+CoreDataClass.swift */; };
+		6BF1C45F20DD32E3000AB15C /* Gift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43920DD32E2000AB15C /* Gift+CoreDataClass.swift */; };
+		6BF1C46020DD32E3000AB15C /* Campaign+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43A20DD32E2000AB15C /* Campaign+CoreDataClass.swift */; };
+		6BF1C46120DD32E3000AB15C /* Scenario+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43B20DD32E2000AB15C /* Scenario+CoreDataClass.swift */; };
+		6BF1C46220DD32E3000AB15C /* AppearanceTheme+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43C20DD32E2000AB15C /* AppearanceTheme+CoreDataClass.swift */; };
+		6BF1C46320DD32E3000AB15C /* Gift+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43D20DD32E2000AB15C /* Gift+CoreDataProperties.swift */; };
+		6BF1C46420DD32E3000AB15C /* Campaign+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43E20DD32E2000AB15C /* Campaign+CoreDataProperties.swift */; };
+		6BF1C46520DD32E3000AB15C /* GiftScenario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C43F20DD32E2000AB15C /* GiftScenario+CoreDataProperties.swift */; };
+		6BF1C46620DD32E3000AB15C /* PMI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44020DD32E2000AB15C /* PMI.xcdatamodeld */; };
+		6BF1C46720DD32E3000AB15C /* Gift+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44320DD32E2000AB15C /* Gift+DictionaryInitializer.swift */; };
+		6BF1C46820DD32E3000AB15C /* Scenario+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44420DD32E2000AB15C /* Scenario+DictionaryInitializer.swift */; };
+		6BF1C46920DD32E3000AB15C /* Scenario+Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44520DD32E2000AB15C /* Scenario+Gift.swift */; };
+		6BF1C46A20DD32E3000AB15C /* GiftScenario+DictionaryInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44620DD32E2000AB15C /* GiftScenario+DictionaryInitializer.swift */; };
+		6BF1C46B20DD32E3000AB15C /* AppearanceTheme+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44720DD32E2000AB15C /* AppearanceTheme+CoreDataExtensions.swift */; };
+		6BF1C46C20DD32E3000AB15C /* Campaign+CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44820DD32E2000AB15C /* Campaign+CoreDataExtensions.swift */; };
+		6BF1C46D20DD32E3000AB15C /* PMIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44920DD32E2000AB15C /* PMIDataSource.swift */; };
+		6BF1C46E20DD32E3000AB15C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1C44B20DD32E2000AB15C /* LoginViewController.swift */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,46 +75,46 @@
 		3AA1EE9E20D817E400CD4C2E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		3AA1EEA120D8185C00CD4C2E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
-		6B031AA620DC138900A04F77 /* GiftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
-		6B031AA720DC138900A04F77 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
-		6B031AA820DC138900A04F77 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
-		6B031AA920DC138900A04F77 /* DistributedGiftsHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributedGiftsHistoryViewController.swift; sourceTree = "<group>"; };
-		6B031AAB20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDifficultyCollectionViewCell.swift; sourceTree = "<group>"; };
-		6B031AAC20DC138900A04F77 /* SelectDifficultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDifficultyViewController.swift; sourceTree = "<group>"; };
-		6B031AAF20DC138900A04F77 /* ScratchUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchUIView.swift; sourceTree = "<group>"; };
-		6B031AB020DC138900A04F77 /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
-		6B031AB120DC138900A04F77 /* ScratchGiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchGiftViewController.swift; sourceTree = "<group>"; };
-		6B031AB220DC138900A04F77 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
-		6B031AB320DC138900A04F77 /* HostessManagment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostessManagment.storyboard; sourceTree = "<group>"; };
-		6B031AB520DC138900A04F77 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
-		6B031AB620DC138900A04F77 /* UIAlertViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extensions.swift"; sourceTree = "<group>"; };
-		6B031AB820DC138900A04F77 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6B031AC920DC13AF00A04F77 /* AppearanceTheme+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6B031ACA20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6B031ACB20DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6B031ACC20DC13AF00A04F77 /* Gift+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6B031ACD20DC13AF00A04F77 /* Campaign+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6B031ACE20DC13AF00A04F77 /* Scenario+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6B031ACF20DC13AF00A04F77 /* AppearanceTheme+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6B031AD020DC13AF00A04F77 /* Gift+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6B031AD120DC13AF00A04F77 /* Campaign+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6B031AD220DC13AF00A04F77 /* GiftScenario+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6B031AD420DC13AF00A04F77 /* Gift+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+DictionaryInitializer.swift"; sourceTree = "<group>"; };
-		6B031AD520DC13AF00A04F77 /* Scenario+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+DictionaryInitializer.swift"; sourceTree = "<group>"; };
-		6B031AD620DC13AF00A04F77 /* Scenario+Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+Gift.swift"; sourceTree = "<group>"; };
-		6B031AD720DC13AF00A04F77 /* GiftScenario+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+DictionaryInitializer.swift"; sourceTree = "<group>"; };
-		6B031AD820DC13AF00A04F77 /* AppearanceTheme+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataExtensions.swift"; sourceTree = "<group>"; };
-		6B031AD920DC13AF00A04F77 /* Campaign+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataExtensions.swift"; sourceTree = "<group>"; };
-		6B031ADB20DC13AF00A04F77 /* DownloadImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
-		6B031ADC20DC13AF00A04F77 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		6B031ADD20DC13AF00A04F77 /* PMISessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMISessionManager.swift; sourceTree = "<group>"; };
 		6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
-		6B031AF420DC14F200A04F77 /* PMI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PMI.xcdatamodel; sourceTree = "<group>"; };
-		6B031AF520DC14F200A04F77 /* PMIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PMIDataSource.swift; path = ../../../../../Authentic122/Authentic122/Controllers/Datasource/PMIDataSource.swift; sourceTree = "<group>"; };
 		6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YouDecideN-LayerOne.ttf"; sourceTree = "<group>"; };
 		6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinTextViewController.swift; sourceTree = "<group>"; };
 		6B031AFD20DC192E00A04F77 /* LoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
+		6BF1C41F20DD32E2000AB15C /* GiftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftTableViewCell.swift; sourceTree = "<group>"; };
+		6BF1C42020DD32E2000AB15C /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		6BF1C42120DD32E2000AB15C /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		6BF1C42220DD32E2000AB15C /* DistributedGiftsHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributedGiftsHistoryViewController.swift; sourceTree = "<group>"; };
+		6BF1C42420DD32E2000AB15C /* SelectDifficultyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDifficultyCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BF1C42520DD32E2000AB15C /* SelectDifficultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDifficultyViewController.swift; sourceTree = "<group>"; };
+		6BF1C42820DD32E2000AB15C /* ScratchUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchUIView.swift; sourceTree = "<group>"; };
+		6BF1C42920DD32E2000AB15C /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		6BF1C42A20DD32E2000AB15C /* ScratchGiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchGiftViewController.swift; sourceTree = "<group>"; };
+		6BF1C42B20DD32E2000AB15C /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
+		6BF1C42D20DD32E2000AB15C /* DownloadImageOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
+		6BF1C42E20DD32E2000AB15C /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		6BF1C42F20DD32E2000AB15C /* PMISessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMISessionManager.swift; sourceTree = "<group>"; };
+		6BF1C43020DD32E2000AB15C /* HostessManagment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostessManagment.storyboard; sourceTree = "<group>"; };
+		6BF1C43220DD32E2000AB15C /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
+		6BF1C43320DD32E2000AB15C /* UIAlertViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extensions.swift"; sourceTree = "<group>"; };
+		6BF1C43620DD32E2000AB15C /* AppearanceTheme+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BF1C43720DD32E2000AB15C /* Scenario+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BF1C43820DD32E2000AB15C /* GiftScenario+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BF1C43920DD32E2000AB15C /* Gift+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BF1C43A20DD32E2000AB15C /* Campaign+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BF1C43B20DD32E2000AB15C /* Scenario+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BF1C43C20DD32E2000AB15C /* AppearanceTheme+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BF1C43D20DD32E2000AB15C /* Gift+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BF1C43E20DD32E2000AB15C /* Campaign+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BF1C43F20DD32E2000AB15C /* GiftScenario+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BF1C44120DD32E2000AB15C /* PMI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PMI.xcdatamodel; sourceTree = "<group>"; };
+		6BF1C44320DD32E2000AB15C /* Gift+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gift+DictionaryInitializer.swift"; sourceTree = "<group>"; };
+		6BF1C44420DD32E2000AB15C /* Scenario+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+DictionaryInitializer.swift"; sourceTree = "<group>"; };
+		6BF1C44520DD32E2000AB15C /* Scenario+Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scenario+Gift.swift"; sourceTree = "<group>"; };
+		6BF1C44620DD32E2000AB15C /* GiftScenario+DictionaryInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GiftScenario+DictionaryInitializer.swift"; sourceTree = "<group>"; };
+		6BF1C44720DD32E2000AB15C /* AppearanceTheme+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppearanceTheme+CoreDataExtensions.swift"; sourceTree = "<group>"; };
+		6BF1C44820DD32E2000AB15C /* Campaign+CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Campaign+CoreDataExtensions.swift"; sourceTree = "<group>"; };
+		6BF1C44920DD32E2000AB15C /* PMIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMIDataSource.swift; sourceTree = "<group>"; };
+		6BF1C44B20DD32E2000AB15C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA1EE8420D8147700CD4C2E /* AppDelegate.swift */,
-				6B031AA420DC138900A04F77 /* GiftsManagment */,
+				6BF1C41D20DD32E2000AB15C /* GiftsManagment */,
 				3AA1EE9620D8159100CD4C2E /* ViewControllers */,
 				3AA1EEA420D819C400CD4C2E /* Controllers */,
 				3A5A8CE620D8D94F008643DB /* Resources */,
@@ -244,128 +244,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6B031AA420DC138900A04F77 /* GiftsManagment */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AC720DC13AF00A04F77 /* DataStore */,
-				6B031ADA20DC13AF00A04F77 /* Networking */,
-				6B031AB320DC138900A04F77 /* HostessManagment.storyboard */,
-				6B031AA520DC138900A04F77 /* Configurations */,
-				6B031AAA20DC138900A04F77 /* Select Difficulty */,
-				6B031AAD20DC138900A04F77 /* Scratch Gift */,
-				6B031AB420DC138900A04F77 /* Extensions */,
-				6B031AB720DC138900A04F77 /* Login */,
-			);
-			path = GiftsManagment;
-			sourceTree = "<group>";
-		};
-		6B031AA520DC138900A04F77 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AA620DC138900A04F77 /* GiftTableViewCell.swift */,
-				6B031AA720DC138900A04F77 /* ConfigurationViewController.swift */,
-				6B031AA820DC138900A04F77 /* ChannelTableViewCell.swift */,
-				6B031AA920DC138900A04F77 /* DistributedGiftsHistoryViewController.swift */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
-		6B031AAA20DC138900A04F77 /* Select Difficulty */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AAB20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift */,
-				6B031AAC20DC138900A04F77 /* SelectDifficultyViewController.swift */,
-			);
-			path = "Select Difficulty";
-			sourceTree = "<group>";
-		};
-		6B031AAD20DC138900A04F77 /* Scratch Gift */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AAE20DC138900A04F77 /* Scratch */,
-				6B031AB120DC138900A04F77 /* ScratchGiftViewController.swift */,
-				6B031AB220DC138900A04F77 /* gift.png */,
-			);
-			path = "Scratch Gift";
-			sourceTree = "<group>";
-		};
-		6B031AAE20DC138900A04F77 /* Scratch */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AAF20DC138900A04F77 /* ScratchUIView.swift */,
-				6B031AB020DC138900A04F77 /* ScratchView.swift */,
-			);
-			path = Scratch;
-			sourceTree = "<group>";
-		};
-		6B031AB420DC138900A04F77 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AB520DC138900A04F77 /* Storyboard+Extensions.swift */,
-				6B031AB620DC138900A04F77 /* UIAlertViewController+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6B031AB720DC138900A04F77 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AB820DC138900A04F77 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		6B031AC720DC13AF00A04F77 /* DataStore */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AF320DC14F200A04F77 /* PMI.xcdatamodeld */,
-				6B031AF520DC14F200A04F77 /* PMIDataSource.swift */,
-				6B031AC820DC13AF00A04F77 /* Generated */,
-				6B031AD320DC13AF00A04F77 /* Extensions */,
-			);
-			path = DataStore;
-			sourceTree = "<group>";
-		};
-		6B031AC820DC13AF00A04F77 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AC920DC13AF00A04F77 /* AppearanceTheme+CoreDataProperties.swift */,
-				6B031ACA20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift */,
-				6B031ACB20DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift */,
-				6B031ACC20DC13AF00A04F77 /* Gift+CoreDataClass.swift */,
-				6B031ACD20DC13AF00A04F77 /* Campaign+CoreDataClass.swift */,
-				6B031ACE20DC13AF00A04F77 /* Scenario+CoreDataClass.swift */,
-				6B031ACF20DC13AF00A04F77 /* AppearanceTheme+CoreDataClass.swift */,
-				6B031AD020DC13AF00A04F77 /* Gift+CoreDataProperties.swift */,
-				6B031AD120DC13AF00A04F77 /* Campaign+CoreDataProperties.swift */,
-				6B031AD220DC13AF00A04F77 /* GiftScenario+CoreDataProperties.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		6B031AD320DC13AF00A04F77 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6B031AD420DC13AF00A04F77 /* Gift+DictionaryInitializer.swift */,
-				6B031AD520DC13AF00A04F77 /* Scenario+DictionaryInitializer.swift */,
-				6B031AD620DC13AF00A04F77 /* Scenario+Gift.swift */,
-				6B031AD720DC13AF00A04F77 /* GiftScenario+DictionaryInitializer.swift */,
-				6B031AD820DC13AF00A04F77 /* AppearanceTheme+CoreDataExtensions.swift */,
-				6B031AD920DC13AF00A04F77 /* Campaign+CoreDataExtensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6B031ADA20DC13AF00A04F77 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				6B031ADB20DC13AF00A04F77 /* DownloadImageOperation.swift */,
-				6B031ADC20DC13AF00A04F77 /* String+Extensions.swift */,
-				6B031ADD20DC13AF00A04F77 /* PMISessionManager.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		6B031AFA20DC192E00A04F77 /* Win Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +266,129 @@
 				6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */,
 			);
 			path = Language;
+			sourceTree = "<group>";
+		};
+		6BF1C41D20DD32E2000AB15C /* GiftsManagment */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C41E20DD32E2000AB15C /* Configurations */,
+				6BF1C42320DD32E2000AB15C /* Select Difficulty */,
+				6BF1C42620DD32E2000AB15C /* Scratch Gift */,
+				6BF1C42C20DD32E2000AB15C /* Networking */,
+				6BF1C43020DD32E2000AB15C /* HostessManagment.storyboard */,
+				6BF1C43120DD32E2000AB15C /* Extensions */,
+				6BF1C43420DD32E2000AB15C /* DataStore */,
+				6BF1C44A20DD32E2000AB15C /* Login */,
+			);
+			name = GiftsManagment;
+			path = ../../../../Desktop/GiftsManagment;
+			sourceTree = "<group>";
+		};
+		6BF1C41E20DD32E2000AB15C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C41F20DD32E2000AB15C /* GiftTableViewCell.swift */,
+				6BF1C42020DD32E2000AB15C /* ConfigurationViewController.swift */,
+				6BF1C42120DD32E2000AB15C /* ChannelTableViewCell.swift */,
+				6BF1C42220DD32E2000AB15C /* DistributedGiftsHistoryViewController.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		6BF1C42320DD32E2000AB15C /* Select Difficulty */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C42420DD32E2000AB15C /* SelectDifficultyCollectionViewCell.swift */,
+				6BF1C42520DD32E2000AB15C /* SelectDifficultyViewController.swift */,
+			);
+			path = "Select Difficulty";
+			sourceTree = "<group>";
+		};
+		6BF1C42620DD32E2000AB15C /* Scratch Gift */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C42720DD32E2000AB15C /* Scratch */,
+				6BF1C42A20DD32E2000AB15C /* ScratchGiftViewController.swift */,
+				6BF1C42B20DD32E2000AB15C /* gift.png */,
+			);
+			path = "Scratch Gift";
+			sourceTree = "<group>";
+		};
+		6BF1C42720DD32E2000AB15C /* Scratch */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C42820DD32E2000AB15C /* ScratchUIView.swift */,
+				6BF1C42920DD32E2000AB15C /* ScratchView.swift */,
+			);
+			path = Scratch;
+			sourceTree = "<group>";
+		};
+		6BF1C42C20DD32E2000AB15C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C42D20DD32E2000AB15C /* DownloadImageOperation.swift */,
+				6BF1C42E20DD32E2000AB15C /* String+Extensions.swift */,
+				6BF1C42F20DD32E2000AB15C /* PMISessionManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6BF1C43120DD32E2000AB15C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C43220DD32E2000AB15C /* Storyboard+Extensions.swift */,
+				6BF1C43320DD32E2000AB15C /* UIAlertViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BF1C43420DD32E2000AB15C /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C43520DD32E2000AB15C /* Generated */,
+				6BF1C44020DD32E2000AB15C /* PMI.xcdatamodeld */,
+				6BF1C44220DD32E2000AB15C /* Extensions */,
+				6BF1C44920DD32E2000AB15C /* PMIDataSource.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		6BF1C43520DD32E2000AB15C /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C43620DD32E2000AB15C /* AppearanceTheme+CoreDataProperties.swift */,
+				6BF1C43720DD32E2000AB15C /* Scenario+CoreDataProperties.swift */,
+				6BF1C43820DD32E2000AB15C /* GiftScenario+CoreDataClass.swift */,
+				6BF1C43920DD32E2000AB15C /* Gift+CoreDataClass.swift */,
+				6BF1C43A20DD32E2000AB15C /* Campaign+CoreDataClass.swift */,
+				6BF1C43B20DD32E2000AB15C /* Scenario+CoreDataClass.swift */,
+				6BF1C43C20DD32E2000AB15C /* AppearanceTheme+CoreDataClass.swift */,
+				6BF1C43D20DD32E2000AB15C /* Gift+CoreDataProperties.swift */,
+				6BF1C43E20DD32E2000AB15C /* Campaign+CoreDataProperties.swift */,
+				6BF1C43F20DD32E2000AB15C /* GiftScenario+CoreDataProperties.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		6BF1C44220DD32E2000AB15C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C44320DD32E2000AB15C /* Gift+DictionaryInitializer.swift */,
+				6BF1C44420DD32E2000AB15C /* Scenario+DictionaryInitializer.swift */,
+				6BF1C44520DD32E2000AB15C /* Scenario+Gift.swift */,
+				6BF1C44620DD32E2000AB15C /* GiftScenario+DictionaryInitializer.swift */,
+				6BF1C44720DD32E2000AB15C /* AppearanceTheme+CoreDataExtensions.swift */,
+				6BF1C44820DD32E2000AB15C /* Campaign+CoreDataExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BF1C44A20DD32E2000AB15C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1C44B20DD32E2000AB15C /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		842D8298C3E3AE26CE11139B /* Pods */ = {
@@ -462,11 +463,11 @@
 				6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */,
 				3AA1EE8F20D8147800CD4C2E /* LaunchScreen.storyboard in Resources */,
 				3AA1EE8C20D8147800CD4C2E /* Assets.xcassets in Resources */,
-				6B031AC320DC138900A04F77 /* HostessManagment.storyboard in Resources */,
+				6BF1C45920DD32E3000AB15C /* HostessManagment.storyboard in Resources */,
 				3AA1EE8A20D8147700CD4C2E /* Main.storyboard in Resources */,
 				3A5A8CEA20D8D9BC008643DB /* package_json.json in Resources */,
+				6BF1C45520DD32E3000AB15C /* gift.png in Resources */,
 				6B031AF220DC13BD00A04F77 /* MyriadPro-Bold.otf in Resources */,
-				6B031AC220DC138900A04F77 /* gift.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,48 +533,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B031ABC20DC138900A04F77 /* DistributedGiftsHistoryViewController.swift in Sources */,
-				6B031ADE20DC13AF00A04F77 /* AppearanceTheme+CoreDataProperties.swift in Sources */,
+				6BF1C46E20DD32E3000AB15C /* LoginViewController.swift in Sources */,
+				6BF1C45720DD32E3000AB15C /* String+Extensions.swift in Sources */,
+				6BF1C46B20DD32E3000AB15C /* AppearanceTheme+CoreDataExtensions.swift in Sources */,
+				6BF1C44F20DD32E3000AB15C /* DistributedGiftsHistoryViewController.swift in Sources */,
+				6BF1C46620DD32E3000AB15C /* PMI.xcdatamodeld in Sources */,
+				6BF1C45620DD32E3000AB15C /* DownloadImageOperation.swift in Sources */,
+				6BF1C46820DD32E3000AB15C /* Scenario+DictionaryInitializer.swift in Sources */,
+				6BF1C46020DD32E3000AB15C /* Campaign+CoreDataClass.swift in Sources */,
 				3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */,
-				6B031AEE20DC13AF00A04F77 /* DownloadImageOperation.swift in Sources */,
-				6B031AE220DC13AF00A04F77 /* Campaign+CoreDataClass.swift in Sources */,
+				6BF1C46520DD32E3000AB15C /* GiftScenario+CoreDataProperties.swift in Sources */,
+				6BF1C46420DD32E3000AB15C /* Campaign+CoreDataProperties.swift in Sources */,
+				6BF1C45B20DD32E3000AB15C /* UIAlertViewController+Extensions.swift in Sources */,
 				3AA1EE8520D8147700CD4C2E /* AppDelegate.swift in Sources */,
+				6BF1C46120DD32E3000AB15C /* Scenario+CoreDataClass.swift in Sources */,
+				6BF1C44D20DD32E3000AB15C /* ConfigurationViewController.swift in Sources */,
+				6BF1C46C20DD32E3000AB15C /* Campaign+CoreDataExtensions.swift in Sources */,
+				6BF1C46320DD32E3000AB15C /* Gift+CoreDataProperties.swift in Sources */,
+				6BF1C46A20DD32E3000AB15C /* GiftScenario+DictionaryInitializer.swift in Sources */,
+				6BF1C46720DD32E3000AB15C /* Gift+DictionaryInitializer.swift in Sources */,
+				6BF1C45120DD32E3000AB15C /* SelectDifficultyViewController.swift in Sources */,
 				6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */,
-				6B031AF720DC14F300A04F77 /* PMIDataSource.swift in Sources */,
-				6B031AC620DC138900A04F77 /* LoginViewController.swift in Sources */,
-				6B031AE320DC13AF00A04F77 /* Scenario+CoreDataClass.swift in Sources */,
-				6B031ABE20DC138900A04F77 /* SelectDifficultyViewController.swift in Sources */,
-				6B031AC520DC138900A04F77 /* UIAlertViewController+Extensions.swift in Sources */,
-				6B031AE520DC13AF00A04F77 /* Gift+CoreDataProperties.swift in Sources */,
-				6B031AEF20DC13AF00A04F77 /* String+Extensions.swift in Sources */,
 				3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */,
-				6B031ADF20DC13AF00A04F77 /* Scenario+CoreDataProperties.swift in Sources */,
-				6B031ABD20DC138900A04F77 /* SelectDifficultyCollectionViewCell.swift in Sources */,
+				6BF1C45820DD32E3000AB15C /* PMISessionManager.swift in Sources */,
+				6BF1C44E20DD32E3000AB15C /* ChannelTableViewCell.swift in Sources */,
 				6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */,
+				6BF1C45420DD32E3000AB15C /* ScratchGiftViewController.swift in Sources */,
+				6BF1C45E20DD32E3000AB15C /* GiftScenario+CoreDataClass.swift in Sources */,
+				6BF1C46920DD32E3000AB15C /* Scenario+Gift.swift in Sources */,
 				3AA1EE9C20D8164100CD4C2E /* MemoryGameViewController.swift in Sources */,
+				6BF1C45D20DD32E3000AB15C /* Scenario+CoreDataProperties.swift in Sources */,
+				6BF1C45A20DD32E3000AB15C /* Storyboard+Extensions.swift in Sources */,
+				6BF1C45020DD32E3000AB15C /* SelectDifficultyCollectionViewCell.swift in Sources */,
+				6BF1C45C20DD32E3000AB15C /* AppearanceTheme+CoreDataProperties.swift in Sources */,
 				6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */,
-				6B031AE020DC13AF00A04F77 /* GiftScenario+CoreDataClass.swift in Sources */,
-				6B031ABA20DC138900A04F77 /* ConfigurationViewController.swift in Sources */,
-				6B031AC420DC138900A04F77 /* Storyboard+Extensions.swift in Sources */,
-				6B031AE820DC13AF00A04F77 /* Gift+DictionaryInitializer.swift in Sources */,
-				6B031AED20DC13AF00A04F77 /* Campaign+CoreDataExtensions.swift in Sources */,
-				6B031AE420DC13AF00A04F77 /* AppearanceTheme+CoreDataClass.swift in Sources */,
-				6B031ABF20DC138900A04F77 /* ScratchUIView.swift in Sources */,
+				6BF1C45320DD32E3000AB15C /* ScratchView.swift in Sources */,
+				6BF1C44C20DD32E3000AB15C /* GiftTableViewCell.swift in Sources */,
 				3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */,
-				6B031AEB20DC13AF00A04F77 /* GiftScenario+DictionaryInitializer.swift in Sources */,
-				6B031AF620DC14F300A04F77 /* PMI.xcdatamodeld in Sources */,
-				6B031AC120DC138900A04F77 /* ScratchGiftViewController.swift in Sources */,
-				6B031AEA20DC13AF00A04F77 /* Scenario+Gift.swift in Sources */,
-				6B031AE120DC13AF00A04F77 /* Gift+CoreDataClass.swift in Sources */,
-				6B031AC020DC138900A04F77 /* ScratchView.swift in Sources */,
+				6BF1C45F20DD32E3000AB15C /* Gift+CoreDataClass.swift in Sources */,
+				6BF1C46220DD32E3000AB15C /* AppearanceTheme+CoreDataClass.swift in Sources */,
 				3AA1EE9920D815EA00CD4C2E /* BaseViewController.swift in Sources */,
-				6B031AF020DC13AF00A04F77 /* PMISessionManager.swift in Sources */,
-				6B031AE620DC13AF00A04F77 /* Campaign+CoreDataProperties.swift in Sources */,
-				6B031AB920DC138900A04F77 /* GiftTableViewCell.swift in Sources */,
-				6B031ABB20DC138900A04F77 /* ChannelTableViewCell.swift in Sources */,
-				6B031AE920DC13AF00A04F77 /* Scenario+DictionaryInitializer.swift in Sources */,
-				6B031AEC20DC13AF00A04F77 /* AppearanceTheme+CoreDataExtensions.swift in Sources */,
-				6B031AE720DC13AF00A04F77 /* GiftScenario+CoreDataProperties.swift in Sources */,
+				6BF1C46D20DD32E3000AB15C /* PMIDataSource.swift in Sources */,
+				6BF1C45220DD32E3000AB15C /* ScratchUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,14 +784,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6B031AF320DC14F200A04F77 /* PMI.xcdatamodeld */ = {
+		6BF1C44020DD32E2000AB15C /* PMI.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6B031AF420DC14F200A04F77 /* PMI.xcdatamodel */,
+				6BF1C44120DD32E2000AB15C /* PMI.xcdatamodel */,
 			);
-			currentVersion = 6B031AF420DC14F200A04F77 /* PMI.xcdatamodel */;
-			name = PMI.xcdatamodeld;
-			path = ../../../../../Authentic122/Authentic122/Controllers/Datasource/PMI.xcdatamodeld;
+			currentVersion = 6BF1C44120DD32E2000AB15C /* PMI.xcdatamodel */;
+			path = PMI.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

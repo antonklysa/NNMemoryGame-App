@@ -14,6 +14,10 @@ class ChooseLanguageViewController: BaseViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func arabicButtonAction(_ sender: Any) {
         LocalizationManagers.shared.selectedLanguage = .ar
         
