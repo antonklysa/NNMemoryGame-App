@@ -20,13 +20,15 @@ class ChooseLanguageViewController: BaseViewController {
     
     @IBAction func arabicButtonAction(_ sender: Any) {
         LocalizationManagers.shared.selectedLanguage = .ar
+        PMIDataSource.defaultDataSource.language = Language.Arabic
         
         self.pushGameViewController()
     }
     
     @IBAction func frenchButtonAction(_ sender: Any) {
         LocalizationManagers.shared.selectedLanguage = .fr
-        
+        PMIDataSource.defaultDataSource.language = Language.French
+
         self.pushGameViewController()
     }
     
