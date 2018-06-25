@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -27,6 +27,7 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MyriadPro-Bold.otf</string>
 		<string>YouDecideN-Layer_Four.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

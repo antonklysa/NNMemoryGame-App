@@ -13,7 +13,7 @@ import Mantle
 class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var timer: Timer!
-    static private var seconds: Int = 60
+    private var seconds: Int = 60
     
     @IBOutlet private weak var topContainerView: UIView!
     @IBOutlet private weak var topCounterContainerView: UIView!
@@ -40,11 +40,12 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
             topContainerView.semanticContentAttribute = .forceRightToLeft
             topCounterContainerView.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.semanticContentAttribute = .forceRightToLeft
+            counterValueLabel.font = UIFont(name: "MyriadPro-Bold", size: counterValueLabel.font.pointSize)
         }
         
         self.collectionView.alpha = 0.0
         
-        counterValueLabel.text = LocalizationManagers.isArabic() ? "\((MemoryGameViewController.seconds)) :" : ": \((MemoryGameViewController.seconds))"
+        counterValueLabel.text = LocalizationManagers.isArabic() ? "\((self.seconds)) :" : ": \((self.seconds))"
         topCounterContainerView.layer.cornerRadius = 5
         
         titleImageView.image = UIImage(named: LocalizationManagers.isArabic() ? "ar_title" : "fr_title")
@@ -59,7 +60,8 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         collectionViewDataSourceArray = try! MTLJSONAdapter.models(of: Card.self, fromJSONArray: jsonDict as! [Any]) as! [Card]
 
         //randomize collection view data array
-        collectionViewDataSourceArray.shuffle()
+//        collectionViewDataSourceArray.shuffle()
+        collectionViewDataSourceArray = collectionViewDataSourceArray.shuffled()
         
         //setup collection view layout
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -145,17 +147,18 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     
     private func beginTimeAction() {
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
-            MemoryGameViewController.seconds -= 1
-            self?.counterValueLabel.text = LocalizationManagers.isArabic() ? "\((MemoryGameViewController.seconds)) :" : ": \((MemoryGameViewController.seconds))"
-            if MemoryGameViewController.seconds <= 0 {
+            self!.seconds -= 1
+            self?.counterValueLabel.text = LocalizationManagers.isArabic() ? "\((self!.seconds)) :" : ": \((self!.seconds))"
+            if self!.seconds <= 0 {
                 timer.invalidate()
-                self?.loseAction()
+                self!.loseAction()
             }
         }
     }
     
     private func winAction() {
         self.timer.invalidate()
+        self.timer = nil
         
         let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
         let transition = CATransition()
@@ -168,6 +171,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     
     private func loseAction() {
         self.timer.invalidate()
+        self.timer = nil
         
         let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
         
@@ -210,9 +214,9 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
 extension MutableCollection {
     /// Shuffles the contents of this collection.
     mutating func shuffle() {
-//        let c = count
-//        guard c > 1 else { return }
-//
+        let c = count
+        guard c > 1 else { return }
+        
 //        for (firstUnshuffled, unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
 //            let d: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
 //            let i = index(firstUnshuffled, offsetBy: d)
@@ -225,7 +229,13 @@ extension Sequence {
     /// Returns an array with the contents of this sequence, shuffled.
     func shuffled() -> [Element] {
         var result = Array(self)
-        result.shuffle()
+//        result.shuffle()
+        result.swapAt(0, 7)
+        result.swapAt(2, 4)
+        result.swapAt(3, 6)
+        result.swapAt(4, 7)
+        result.swapAt(5, 6)
+        
         return result
     }
 }
