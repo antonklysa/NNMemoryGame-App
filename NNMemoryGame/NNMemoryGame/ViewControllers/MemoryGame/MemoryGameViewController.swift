@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Mantle
 
-class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var timer: Timer!
     private var seconds: Int = 60
@@ -75,21 +75,42 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+//        self.titleImageViewTopConstraint.constant = 55.0
+//        UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseInOut, animations: {
+//            self.view.layoutIfNeeded()
+//        }) { (flag) in
+//            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+//                self.collectionView.alpha = 1.0
+//            }, completion: { (flag) in
+//                self.beginTimeAction()
+//            })
+//        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.titleImageViewTopConstraint.constant = 55.0
-        UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseInOut, animations: {
-            self.view.layoutIfNeeded()
-        }) { (flag) in
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.collectionView.alpha = 1.0
-            }, completion: { (flag) in
-                self.beginTimeAction()
-            })
+        self.collectionView.alpha = 1.0
+        self.view.layoutIfNeeded()
+        self.showAllItemsUnflipped()
+    }
+    
+    func showAllItemsUnflipped() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        for cellIndex in 0 ..< collectionViewDataSourceArray.count {
+            let cell = self.collectionView.cellForItem(at: IndexPath(item: cellIndex, section: 0)) as! CardCollectionViewCell
+            cell.flip(onCellState: .open, time: 5.0) { (flag) in
+                cell.flip(onCellState: .close, completionHandler: { (flag) in
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                })
+            }
         }
     }
     
     //MARK: actions
     
-    private func flipCard(indexPath: IndexPath) {
+    private func flipCard(indexPath: IndexPath, time: TimeInterval = 0.3) {
         UIApplication.shared.beginIgnoringInteractionEvents()
         let selectedCell: CardCollectionViewCell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
@@ -104,7 +125,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
             firstSelectedCell = selectedCell
         }
         
-        selectedCell.flip(onCellState: .open) { [weak self] (bool) in
+        selectedCell.flip(onCellState: .open, time: time) { [weak self] (bool) in
             self?.selectedArray.append(selectedCell.cardModel)
             
             if (self?.selectedArray.count)! % 2 == 0 {
@@ -157,30 +178,32 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     private func winAction() {
-        self.timer.invalidate()
-        self.timer = nil
+        if timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
         
-        let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = kCATransitionFade
-        self.navigationController?.view.layer.add(transition, forKey: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+//        let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
+//        let transition = CATransition()
+//        transition.duration = 0.5
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.type = kCATransitionFade
+//        self.navigationController?.view.layer.add(transition, forKey: nil)
+//        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     private func loseAction() {
         self.timer.invalidate()
         self.timer = nil
         
-        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
-        
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = kCATransitionFade
-        self.navigationController?.view.layer.add(transition, forKey: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+//        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
+//
+//        let transition = CATransition()
+//        transition.duration = 0.5
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.type = kCATransitionFade
+//        self.navigationController?.view.layer.add(transition, forKey: nil)
+//        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     //MARK: UICollectionViewDelegate
@@ -206,6 +229,11 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         cell.setCardModel(model: collectionViewDataSourceArray[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200.0, height: 200.0)
+    }
+    
 }
 
 

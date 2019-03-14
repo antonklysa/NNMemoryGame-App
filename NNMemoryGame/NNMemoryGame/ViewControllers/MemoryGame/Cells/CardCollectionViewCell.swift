@@ -31,7 +31,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     //MARK: actions
     
-    final func flip(onCellState: CellState, completionHandler: ((Bool) -> Void)?) {
+    final func flip(onCellState: CellState, time: TimeInterval = 0.3, completionHandler: ((Bool) -> Void)?) {
         
         var newImage: UIImageView!
         let options: UIViewAnimationOptions = [.transitionFlipFromLeft, .allowUserInteraction, .beginFromCurrentState]
@@ -43,7 +43,7 @@ class CardCollectionViewCell: UICollectionViewCell {
             newImage.image = UIImage.init(named: CardCollectionViewCell.closedStringImageName)
         }
         
-        UIView.transition(from: currentImage, to: newImage, duration: 0.3, options: options) { (bool) in
+        UIView.transition(from: currentImage, to: newImage, duration: time, options: options) { (bool) in
             if completionHandler != nil {
                 completionHandler!(bool)
             }
