@@ -25,6 +25,8 @@
 		6B920985223BE7F400FB6F8B /* CoachMarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920984223BE7F300FB6F8B /* CoachMarksViewController.swift */; };
 		6B920988223BE7FD00FB6F8B /* GamePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */; };
 		6B92098A223BE81300FB6F8B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920989223BE81300FB6F8B /* AppSettings.swift */; };
+		6B92098D223BEE1300FB6F8B /* TuDecidePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92098C223BEE1300FB6F8B /* TuDecidePopupViewController.swift */; };
+		6B920990223BEE2500FB6F8B /* CongratulationsWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92098F223BEE2500FB6F8B /* CongratulationsWinViewController.swift */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		6B920984223BE7F300FB6F8B /* CoachMarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarksViewController.swift; sourceTree = "<group>"; };
 		6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePopupViewController.swift; sourceTree = "<group>"; };
 		6B920989223BE81300FB6F8B /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		6B92098C223BEE1300FB6F8B /* TuDecidePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuDecidePopupViewController.swift; sourceTree = "<group>"; };
+		6B92098F223BEE2500FB6F8B /* CongratulationsWinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsWinViewController.swift; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				3AA1EE8820D8147700CD4C2E /* Main.storyboard */,
+				6B92098E223BEE2000FB6F8B /* Congratulations */,
+				6B92098B223BEE0B00FB6F8B /* Tu decide popup */,
 				6B920986223BE7F600FB6F8B /* Popup */,
 				6B920983223BE7D100FB6F8B /* Coachmarks */,
 				3AA1EE9720D8159C00CD4C2E /* Base */,
@@ -220,6 +226,22 @@
 				6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */,
 			);
 			path = Popup;
+			sourceTree = "<group>";
+		};
+		6B92098B223BEE0B00FB6F8B /* Tu decide popup */ = {
+			isa = PBXGroup;
+			children = (
+				6B92098C223BEE1300FB6F8B /* TuDecidePopupViewController.swift */,
+			);
+			path = "Tu decide popup";
+			sourceTree = "<group>";
+		};
+		6B92098E223BEE2000FB6F8B /* Congratulations */ = {
+			isa = PBXGroup;
+			children = (
+				6B92098F223BEE2500FB6F8B /* CongratulationsWinViewController.swift */,
+			);
+			path = Congratulations;
 			sourceTree = "<group>";
 		};
 		842D8298C3E3AE26CE11139B /* Pods */ = {
@@ -363,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */,
+				6B920990223BEE2500FB6F8B /* CongratulationsWinViewController.swift in Sources */,
 				3AA1EE8520D8147700CD4C2E /* AppDelegate.swift in Sources */,
 				6B92098A223BE81300FB6F8B /* AppSettings.swift in Sources */,
 				6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */,
@@ -370,6 +393,7 @@
 				6B920985223BE7F400FB6F8B /* CoachMarksViewController.swift in Sources */,
 				6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */,
 				3AA1EE9C20D8164100CD4C2E /* MemoryGameViewController.swift in Sources */,
+				6B92098D223BEE1300FB6F8B /* TuDecidePopupViewController.swift in Sources */,
 				6B920988223BE7FD00FB6F8B /* GamePopupViewController.swift in Sources */,
 				6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */,
 				3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */,
@@ -531,7 +555,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8141ec22-a888-4dcc-86ce-7eab4f18db65";
 				PROVISIONING_PROFILE_SPECIFIER = WildCardProvisionProfile;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -554,7 +578,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9e2155fe-cca0-4af4-b9ac-5f4b8fde0b6c";
 				PROVISIONING_PROFILE_SPECIFIER = MemoryAdHoc;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

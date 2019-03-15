@@ -29,12 +29,23 @@ class CardCollectionViewCell: UICollectionViewCell {
         currentImage.image = UIImage(named: CardCollectionViewCell.closedStringImageName)
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+//        self.currentImage.layer.shadowColor = UIColor.black.withAlphaComponent(1.0).cgColor
+//        self.currentImage.layer.shadowOffset = CGSize(width: 50.0, height: 50.0)
+//        self.currentImage.layer.shadowRadius = 5.0
+//        self.currentImage.layer.shadowOpacity = 0.5
+//        self.currentImage.layer.masksToBounds = false
+//        self.currentImage.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.currentImage.layer.cornerRadius).cgPath
+    }
+    
     //MARK: actions
     
     final func flip(onCellState: CellState, time: TimeInterval = 0.3, completionHandler: ((Bool) -> Void)?) {
         
         var newImage: UIImageView!
-        let options: UIViewAnimationOptions = [.transitionFlipFromLeft, .allowUserInteraction, .beginFromCurrentState]
+        let options: UIView.AnimationOptions = [.transitionFlipFromLeft, .allowUserInteraction, .beginFromCurrentState]
         newImage = UIImageView(frame: contentView.bounds)
         newImage.isOpaque = true
         if onCellState == .open {
@@ -49,5 +60,4 @@ class CardCollectionViewCell: UICollectionViewCell {
             }
         }
         currentImage = newImage
-    }
-}
+    }}

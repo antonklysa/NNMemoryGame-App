@@ -56,7 +56,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
-        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.collectionViewLayout = layout
         collectionView.reloadData()
     }
@@ -191,13 +191,13 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
             self.gameTimer = nil
         }
         
-//        let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        transition.type = kCATransitionFade
-//        self.navigationController?.view.layer.add(transition, forKey: nil)
-//        self.navigationController?.pushViewController(vc, animated: false)
+        let vc: TuDecidePopupViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TuDecidePopupViewController") as! TuDecidePopupViewController
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     private func loseAction() {
@@ -206,14 +206,13 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
             self.gameTimer = nil
         }
         
-//        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
-//
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        transition.type = kCATransitionFade
-//        self.navigationController?.view.layer.add(transition, forKey: nil)
-//        self.navigationController?.pushViewController(vc, animated: false)
+        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoseViewController") as! LoseViewController
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        self.navigationController?.view.layer.add(transition, forKey: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     //MARK: UICollectionViewDelegate
