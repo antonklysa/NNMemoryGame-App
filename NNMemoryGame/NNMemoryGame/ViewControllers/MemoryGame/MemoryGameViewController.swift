@@ -15,12 +15,11 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     var timer: Timer!
     private var seconds: Int = 60
     
-    @IBOutlet private weak var topContainerView: UIView!
-    @IBOutlet private weak var topCounterContainerView: UIView!
-    @IBOutlet private weak var counterImageView: UIImageView!
+//    @IBOutlet private weak var topContainerView: UIView!
+//    @IBOutlet private weak var topCounterContainerView: UIView!
+//    @IBOutlet private weak var counterImageView: UIImageView!
     @IBOutlet private weak var counterValueLabel: UILabel!
     @IBOutlet private weak var titleImageView: UIImageView!
-    @IBOutlet weak var titleImageViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -37,8 +36,8 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         
         //setup localization layout
         if LocalizationManagers.isArabic() {
-            topContainerView.semanticContentAttribute = .forceRightToLeft
-            topCounterContainerView.semanticContentAttribute = .forceRightToLeft
+//            topContainerView.semanticContentAttribute = .forceRightToLeft
+//            topCounterContainerView.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.font = UIFont(name: "MyriadPro-Bold", size: counterValueLabel.font.pointSize)
         }
@@ -46,10 +45,8 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         self.collectionView.alpha = 0.0
         
         counterValueLabel.text = LocalizationManagers.isArabic() ? "\((self.seconds)) :" : ": \((self.seconds))"
-        topCounterContainerView.layer.cornerRadius = 5
         
         titleImageView.image = UIImage(named: LocalizationManagers.isArabic() ? "ar_title" : "fr_title")
-        counterImageView.image = UIImage(named: LocalizationManagers.isArabic() ? "ar_counter" : "fr_counter")
         
         //setup data source array
         //parsing json into an collection view data source array
@@ -72,25 +69,9 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         collectionView.reloadData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-//        self.titleImageViewTopConstraint.constant = 55.0
-//        UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseInOut, animations: {
-//            self.view.layoutIfNeeded()
-//        }) { (flag) in
-//            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
-//                self.collectionView.alpha = 1.0
-//            }, completion: { (flag) in
-//                self.beginTimeAction()
-//            })
-//        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.titleImageViewTopConstraint.constant = 55.0
         self.collectionView.alpha = 1.0
         self.view.layoutIfNeeded()
         self.showAllItemsUnflipped()
@@ -231,7 +212,7 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200.0, height: 200.0)
+        return CGSize(width: 178.0, height: 243.0)
     }
     
 }
@@ -258,11 +239,11 @@ extension Sequence {
     func shuffled() -> [Element] {
         var result = Array(self)
 //        result.shuffle()
-        result.swapAt(0, 7)
-        result.swapAt(2, 4)
-        result.swapAt(3, 6)
-        result.swapAt(4, 7)
-        result.swapAt(5, 6)
+//        result.swapAt(0, 7)
+//        result.swapAt(2, 4)
+//        result.swapAt(3, 6)
+//        result.swapAt(4, 7)
+//        result.swapAt(5, 6)
         
         return result
     }
