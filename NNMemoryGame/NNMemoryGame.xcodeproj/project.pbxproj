@@ -551,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.oze-lca.memory";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oze-lca.memory.2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8141ec22-a888-4dcc-86ce-7eab4f18db65";
 				PROVISIONING_PROFILE_SPECIFIER = WildCardProvisionProfile;
@@ -574,10 +574,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.oze-lca.memory";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oze-lca.memory.2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9e2155fe-cca0-4af4-b9ac-5f4b8fde0b6c";
-				PROVISIONING_PROFILE_SPECIFIER = MemoryAdHoc;
+				PROVISIONING_PROFILE_SPECIFIER = Memory2019_AdHoc;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
