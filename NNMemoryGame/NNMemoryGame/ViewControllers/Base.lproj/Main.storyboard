@@ -23,32 +23,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKx-4o-s1z">
-                                <rect key="frame" x="230" y="528" width="202" height="65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mwT-o8-R0b">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="french_btn"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKx-4o-s1z">
+                                <rect key="frame" x="258" y="532" width="234" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="home_fr_btn"/>
                                 <connections>
                                     <action selector="frenchButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="zBc-Lu-Exb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-Yw-49m">
-                                <rect key="frame" x="592" y="528" width="202" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arabic_btn"/>
-                                <connections>
-                                    <action selector="arabicButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="dUE-rC-vAP"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="choose_language_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mwT-o8-R0b">
-                                <rect key="frame" x="213" y="61" width="599" height="407"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-QS-55r">
                                 <rect key="frame" x="13" y="28" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back_btn"/>
                                 <connections>
                                     <action selector="backButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="8i6-iY-c0q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-Yw-49m">
+                                <rect key="frame" x="543" y="532" width="234" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="home_ar_btn"/>
+                                <connections>
+                                    <action selector="arabicButtonAction:" destination="xEx-BQ-Jy3" eventType="touchUpInside" id="dUE-rC-vAP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,7 +113,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-bc-zFC">
-                                <rect key="frame" x="895" y="20" width="86" height="62"/>
+                                <rect key="frame" x="895" y="24" width="86" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="YouDecideN-LayerOne" family="YouDecide N" pointSize="45"/>
                                 <color key="textColor" red="0.68235294117647061" green="0.21568627450980393" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,18 +272,242 @@
             </objects>
             <point key="canvasLocation" x="2111.71875" y="-113.28125"/>
         </scene>
+        <!--Game Popup View Controller-->
+        <scene sceneID="oFg-qG-joS">
+            <objects>
+                <viewController storyboardIdentifier="GamePopupViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="tmQ-rc-cI1" customClass="GamePopupViewController" customModule="Scratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QFQ-P1-tqE">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA4-pW-hkm">
+                                <rect key="frame" x="224" y="179" width="575" height="386"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="popup_image_0_fr" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-yz-jtw">
+                                        <rect key="frame" x="20" y="20" width="535" height="346"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-m6-Deq">
+                                        <rect key="frame" x="188" y="317" width="200" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="popup_done_btn_fr"/>
+                                        <connections>
+                                            <action selector="doneButtonAction:" destination="tmQ-rc-cI1" eventType="touchUpInside" id="Ope-xP-TKw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-LK-AH9" userLabel="Fumer Tue View">
+                                <rect key="frame" x="0.0" y="693" width="1024" height="75"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jp0-NB-1om">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="jyW-tu-cID"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fumer Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSE-IY-KXb">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9VW-d7-uxS"/>
+                                    <constraint firstAttribute="bottom" secondItem="lSE-IY-KXb" secondAttribute="bottom" id="BEi-Gc-VjU"/>
+                                    <constraint firstAttribute="trailing" secondItem="lSE-IY-KXb" secondAttribute="trailing" id="GRh-il-kVk"/>
+                                    <constraint firstItem="Jp0-NB-1om" firstAttribute="top" secondItem="OMS-LK-AH9" secondAttribute="top" id="RGW-Xz-jNM"/>
+                                    <constraint firstItem="Jp0-NB-1om" firstAttribute="leading" secondItem="OMS-LK-AH9" secondAttribute="leading" id="ita-dj-f8c"/>
+                                    <constraint firstItem="lSE-IY-KXb" firstAttribute="top" secondItem="OMS-LK-AH9" secondAttribute="top" id="jZU-FO-Kci"/>
+                                    <constraint firstItem="lSE-IY-KXb" firstAttribute="leading" secondItem="OMS-LK-AH9" secondAttribute="leading" id="sY8-92-O5J"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jp0-NB-1om" secondAttribute="trailing" id="xCZ-TU-F5v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.455078125" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OMS-LK-AH9" firstAttribute="bottom" secondItem="ehr-fK-YUM" secondAttribute="bottom" id="IP0-Fz-vLm"/>
+                            <constraint firstItem="OMS-LK-AH9" firstAttribute="leading" secondItem="ehr-fK-YUM" secondAttribute="leading" id="kZa-uE-OQM"/>
+                            <constraint firstItem="OMS-LK-AH9" firstAttribute="trailing" secondItem="ehr-fK-YUM" secondAttribute="trailing" id="n1X-R0-olV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ehr-fK-YUM"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="3hX-m6-Deq" id="pRu-a7-bSW"/>
+                        <outlet property="popupContainerView" destination="gA4-pW-hkm" id="5DN-oh-dED"/>
+                        <outlet property="textImageView" destination="xbs-yz-jtw" id="7aa-Q3-N8u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1e-SW-vB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="789"/>
+        </scene>
+        <!--Coach Marks View Controller-->
+        <scene sceneID="lKu-eE-JuL">
+            <objects>
+                <viewController storyboardIdentifier="CoachMarksViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="IBh-ki-BIg" customClass="CoachMarksViewController" customModule="Scratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f67-8K-YbL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iju-6j-E6t" userLabel="Fumer Tue View">
+                                <rect key="frame" x="0.0" y="693" width="1024" height="75"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN7-xw-hWn">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="tyo-Mq-wIP"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fumer Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dH-6i-rTQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="tN7-xw-hWn" firstAttribute="top" secondItem="iju-6j-E6t" secondAttribute="top" id="07t-nU-YnI"/>
+                                    <constraint firstAttribute="trailing" secondItem="tN7-xw-hWn" secondAttribute="trailing" id="1HU-BN-APq"/>
+                                    <constraint firstAttribute="bottom" secondItem="6dH-6i-rTQ" secondAttribute="bottom" id="3JD-m4-gfy"/>
+                                    <constraint firstItem="6dH-6i-rTQ" firstAttribute="top" secondItem="iju-6j-E6t" secondAttribute="top" id="92u-kA-gog"/>
+                                    <constraint firstItem="6dH-6i-rTQ" firstAttribute="leading" secondItem="iju-6j-E6t" secondAttribute="leading" id="SCs-bm-lQE"/>
+                                    <constraint firstAttribute="height" constant="75" id="el0-jj-Oll"/>
+                                    <constraint firstItem="tN7-xw-hWn" firstAttribute="leading" secondItem="iju-6j-E6t" secondAttribute="leading" id="kzb-zs-3eK"/>
+                                    <constraint firstAttribute="trailing" secondItem="6dH-6i-rTQ" secondAttribute="trailing" id="mBy-TB-Qp1"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coachamrks_image_fr" translatesAutoresizingMaskIntoConstraints="NO" id="XaM-ZD-qI2">
+                                <rect key="frame" x="158.5" y="111" width="707" height="448"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="707" id="Di3-Xx-7bW"/>
+                                    <constraint firstAttribute="height" constant="448" id="lfv-nn-C4u"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ia1-20-h5a">
+                                <rect key="frame" x="705" y="459" width="125" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="coachamrks_done_btn_fr"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="IBh-ki-BIg" eventType="touchUpInside" id="UCK-Pk-Guk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.60584332190000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iju-6j-E6t" firstAttribute="leading" secondItem="WvZ-sy-szc" secondAttribute="leading" id="ICZ-It-fsS"/>
+                            <constraint firstItem="XaM-ZD-qI2" firstAttribute="centerX" secondItem="f67-8K-YbL" secondAttribute="centerX" id="VbQ-6f-cy4"/>
+                            <constraint firstItem="iju-6j-E6t" firstAttribute="trailing" secondItem="WvZ-sy-szc" secondAttribute="trailing" id="fKv-Od-tz7"/>
+                            <constraint firstItem="iju-6j-E6t" firstAttribute="bottom" secondItem="WvZ-sy-szc" secondAttribute="bottom" id="mQ1-qa-UR9"/>
+                            <constraint firstItem="XaM-ZD-qI2" firstAttribute="top" secondItem="WvZ-sy-szc" secondAttribute="top" constant="91" id="tXQ-OD-XCu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WvZ-sy-szc"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="XaM-ZD-qI2" id="Quk-73-s7w"/>
+                        <outlet property="doneButton" destination="ia1-20-h5a" id="CKQ-cp-kJ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efY-C7-c90" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="789"/>
+        </scene>
+        <!--Coach Marks View Controller-->
+        <scene sceneID="6VV-oq-aon">
+            <objects>
+                <viewController storyboardIdentifier="CoachMarksViewController_ar" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="eaC-Wh-n4E" customClass="CoachMarksViewController" customModule="Scratch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jrq-W1-6d8">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07g-ux-GP5" userLabel="Fumer Tue View">
+                                <rect key="frame" x="0.0" y="693" width="1024" height="75"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbv-Ki-jdg">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="fOx-KX-sjQ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fumer Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1r-1l-57F">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nbv-Ki-jdg" secondAttribute="trailing" id="5jF-it-GzO"/>
+                                    <constraint firstItem="nbv-Ki-jdg" firstAttribute="top" secondItem="07g-ux-GP5" secondAttribute="top" id="FPQ-sA-VwS"/>
+                                    <constraint firstItem="A1r-1l-57F" firstAttribute="leading" secondItem="07g-ux-GP5" secondAttribute="leading" id="Nwn-KE-Irf"/>
+                                    <constraint firstItem="A1r-1l-57F" firstAttribute="top" secondItem="07g-ux-GP5" secondAttribute="top" id="UDT-e9-CXm"/>
+                                    <constraint firstItem="nbv-Ki-jdg" firstAttribute="leading" secondItem="07g-ux-GP5" secondAttribute="leading" id="UbM-vI-yPu"/>
+                                    <constraint firstAttribute="trailing" secondItem="A1r-1l-57F" secondAttribute="trailing" id="bge-S9-Dxg"/>
+                                    <constraint firstAttribute="bottom" secondItem="A1r-1l-57F" secondAttribute="bottom" id="fFt-QV-fA3"/>
+                                    <constraint firstAttribute="height" constant="75" id="vjq-ba-QgI"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coachamrks_image_ar" translatesAutoresizingMaskIntoConstraints="NO" id="zqc-Ku-l3W">
+                                <rect key="frame" x="158.5" y="111" width="707" height="448"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="448" id="62t-TW-z6z"/>
+                                    <constraint firstAttribute="width" constant="707" id="9ts-Nm-6aq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGh-8c-E5b">
+                                <rect key="frame" x="194" y="468" width="125" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="coachamrks_done_btn_fr"/>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="eaC-Wh-n4E" eventType="touchUpInside" id="P2g-dl-eYK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.60584332190000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="07g-ux-GP5" firstAttribute="trailing" secondItem="tVE-3A-SrY" secondAttribute="trailing" id="8HI-j4-Bdy"/>
+                            <constraint firstItem="zqc-Ku-l3W" firstAttribute="top" secondItem="tVE-3A-SrY" secondAttribute="top" constant="91" id="CBF-pQ-VBD"/>
+                            <constraint firstItem="07g-ux-GP5" firstAttribute="bottom" secondItem="tVE-3A-SrY" secondAttribute="bottom" id="OTw-Yd-oEa"/>
+                            <constraint firstItem="zqc-Ku-l3W" firstAttribute="centerX" secondItem="Jrq-W1-6d8" secondAttribute="centerX" id="Tss-tW-714"/>
+                            <constraint firstItem="07g-ux-GP5" firstAttribute="leading" secondItem="tVE-3A-SrY" secondAttribute="leading" id="voD-ne-izS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tVE-3A-SrY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="zqc-Ku-l3W" id="vLe-HV-MAn"/>
+                        <outlet property="doneButton" destination="MGh-8c-E5b" id="yhZ-vF-oYq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNd-Y8-jLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="1534"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="arabic_btn" width="202" height="65"/>
         <image name="back_btn" width="31" height="22"/>
         <image name="background" width="1024" height="768"/>
-        <image name="choose_language_logo" width="457" height="420"/>
+        <image name="coachamrks_done_btn_fr" width="126" height="39"/>
+        <image name="coachamrks_image_ar" width="759" height="508"/>
+        <image name="coachamrks_image_fr" width="759" height="508"/>
         <image name="fr_title" width="938" height="68"/>
-        <image name="french_btn" width="202" height="65"/>
+        <image name="home_ar_btn" width="234" height="57"/>
+        <image name="home_fr_btn" width="234" height="57"/>
+        <image name="home_icon" width="1024" height="768"/>
         <image name="lose_done_btn_ar" width="179" height="58"/>
         <image name="lose_done_btn_fr" width="179" height="57"/>
         <image name="lose_message_ar" width="517" height="100"/>
         <image name="lose_message_fr" width="529" height="81"/>
+        <image name="popup_done_btn_fr" width="244" height="60"/>
+        <image name="popup_image_0_fr" width="523" height="461"/>
         <image name="win_message_text_ar" width="1024" height="768"/>
         <image name="win_message_text_fr" width="1024" height="768"/>
     </resources>

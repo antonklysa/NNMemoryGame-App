@@ -22,6 +22,9 @@
 		6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */; };
 		6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFD20DC192E00A04F77 /* LoseViewController.swift */; };
 		6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */; };
+		6B920985223BE7F400FB6F8B /* CoachMarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920984223BE7F300FB6F8B /* CoachMarksViewController.swift */; };
+		6B920988223BE7FD00FB6F8B /* GamePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */; };
+		6B92098A223BE81300FB6F8B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920989223BE81300FB6F8B /* AppSettings.swift */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinTextViewController.swift; sourceTree = "<group>"; };
 		6B031AFD20DC192E00A04F77 /* LoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
+		6B920984223BE7F300FB6F8B /* CoachMarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarksViewController.swift; sourceTree = "<group>"; };
+		6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePopupViewController.swift; sourceTree = "<group>"; };
+		6B920989223BE81300FB6F8B /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				3AA1EE8820D8147700CD4C2E /* Main.storyboard */,
+				6B920986223BE7F600FB6F8B /* Popup */,
+				6B920983223BE7D100FB6F8B /* Coachmarks */,
 				3AA1EE9720D8159C00CD4C2E /* Base */,
 				6B137F5220DAAE0300F3F289 /* Language */,
 				3AA1EE9A20D8161200CD4C2E /* MemoryGame */,
@@ -152,6 +160,7 @@
 		3AA1EEA320D819B400CD4C2E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6B920989223BE81300FB6F8B /* AppSettings.swift */,
 				3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */,
 			);
 			path = Managers;
@@ -195,6 +204,22 @@
 				6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */,
 			);
 			path = Language;
+			sourceTree = "<group>";
+		};
+		6B920983223BE7D100FB6F8B /* Coachmarks */ = {
+			isa = PBXGroup;
+			children = (
+				6B920984223BE7F300FB6F8B /* CoachMarksViewController.swift */,
+			);
+			path = Coachmarks;
+			sourceTree = "<group>";
+		};
+		6B920986223BE7F600FB6F8B /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				6B920987223BE7FD00FB6F8B /* GamePopupViewController.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		842D8298C3E3AE26CE11139B /* Pods */ = {
@@ -339,10 +364,13 @@
 			files = (
 				3AA1EE9F20D817E400CD4C2E /* CardCollectionViewCell.swift in Sources */,
 				3AA1EE8520D8147700CD4C2E /* AppDelegate.swift in Sources */,
+				6B92098A223BE81300FB6F8B /* AppSettings.swift in Sources */,
 				6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */,
 				3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */,
+				6B920985223BE7F400FB6F8B /* CoachMarksViewController.swift in Sources */,
 				6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */,
 				3AA1EE9C20D8164100CD4C2E /* MemoryGameViewController.swift in Sources */,
+				6B920988223BE7FD00FB6F8B /* GamePopupViewController.swift in Sources */,
 				6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */,
 				3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */,
 				3AA1EE9920D815EA00CD4C2E /* BaseViewController.swift in Sources */,

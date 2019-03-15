@@ -12,39 +12,31 @@ import Mantle
 
 class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var timer: Timer!
-    private var seconds: Int = 60
-    
-//    @IBOutlet private weak var topContainerView: UIView!
-//    @IBOutlet private weak var topCounterContainerView: UIView!
-//    @IBOutlet private weak var counterImageView: UIImageView!
+    private var seconds: Double = 30.0
+    private var gameTimer: Timer!
+
     @IBOutlet private weak var counterValueLabel: UILabel!
     @IBOutlet private weak var titleImageView: UIImageView!
-    
     @IBOutlet private weak var collectionView: UICollectionView!
     
     private var collectionViewDataSourceArray: [Card] = []
-    
     private var selectedArray: [Card] = []
-    
     private weak var firstSelectedCell: CardCollectionViewCell?
+    var shouldShowCoachMarks: Bool = true
     
     //MARK: lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setup localization layout
+        self.counterValueLabel.text = String(format:"00:%02d", Int(self.seconds))
+
         if LocalizationManagers.isArabic() {
-//            topContainerView.semanticContentAttribute = .forceRightToLeft
-//            topCounterContainerView.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.semanticContentAttribute = .forceRightToLeft
             counterValueLabel.font = UIFont(name: "MyriadPro-Bold", size: counterValueLabel.font.pointSize)
         }
         
         self.collectionView.alpha = 0.0
-        
-        counterValueLabel.text = LocalizationManagers.isArabic() ? "\((self.seconds)) :" : ": \((self.seconds))"
         
         titleImageView.image = UIImage(named: LocalizationManagers.isArabic() ? "ar_title" : "fr_title")
         
@@ -69,24 +61,47 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         collectionView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if self.shouldShowCoachMarks {
+            self.showCoachmarks()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.collectionView.alpha = 1.0
         self.view.layoutIfNeeded()
-        self.showAllItemsUnflipped()
     }
     
     func showAllItemsUnflipped() {
         UIApplication.shared.beginIgnoringInteractionEvents()
         for cellIndex in 0 ..< collectionViewDataSourceArray.count {
             let cell = self.collectionView.cellForItem(at: IndexPath(item: cellIndex, section: 0)) as! CardCollectionViewCell
-            cell.flip(onCellState: .open, time: 5.0) { (flag) in
-                cell.flip(onCellState: .close, completionHandler: { (flag) in
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                })
+            cell.flip(onCellState: .open) { (flag) in
+                let deadlineTime = DispatchTime.now() + .seconds(5)
+                DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                    cell.flip(onCellState: .close, completionHandler: { (flag) in
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                        if flag && self.gameTimer == nil {
+                            self.beginTimerUpdates()
+                        }
+                    })
+                }
             }
         }
+    }
+    
+    //MARK: Router
+    
+    private func showCoachmarks() {
+        let coachMarksVC = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AppSettings.defaultSettings.language.isArabic() ? "CoachMarksViewController_ar" : "CoachMarksViewController")) as! CoachMarksViewController
+        coachMarksVC.delegate = self
+        self.present(coachMarksVC, animated: true, completion: nil)
+        
+        self.shouldShowCoachMarks = false
     }
     
     //MARK: actions
@@ -133,7 +148,14 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
                     self?.firstSelectedCell = nil
                     UIApplication.shared.endIgnoringInteractionEvents()
                     if self?.selectedArray.count == self?.collectionViewDataSourceArray.count {
-                        self?.winAction()
+//                        self?.winAction()
+                        let popupVC = self?.storyboard?.instantiateViewController(withIdentifier: String(describing: GamePopupViewController.self)) as! GamePopupViewController
+                        popupVC.delegate = self
+                        let textImage = UIImage(named: "popup_image_\(arc4random()%4)_\(AppSettings.defaultSettings.language.prefixLanguage())")
+                        popupVC.textImage = textImage
+                        self?.present(popupVC, animated: true, completion: nil)
+                        
+                        self?.gameTimer.invalidate()
                     }
                 }
             } else {
@@ -147,21 +169,26 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
 //        }
     }
     
-    private func beginTimeAction() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
-            self!.seconds -= 1
-            self?.counterValueLabel.text = LocalizationManagers.isArabic() ? "\((self!.seconds)) :" : ": \((self!.seconds))"
-            if self!.seconds <= 0 {
-                timer.invalidate()
-                self!.loseAction()
-            }
+    
+    //MARK: Timer
+    
+    private func beginTimerUpdates() {
+        gameTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func timerAction() {
+        self.seconds -= 0.1
+        self.counterValueLabel.text = String(format:"00:%02d", Int(self.seconds))
+        
+        if self.seconds <= 0 {
+            self.loseAction()
         }
     }
     
     private func winAction() {
-        if timer != nil {
-            self.timer.invalidate()
-            self.timer = nil
+        if gameTimer != nil {
+            self.gameTimer.invalidate()
+            self.gameTimer = nil
         }
         
 //        let vc: WinTextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"WinTextViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! WinTextViewController
@@ -174,8 +201,10 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     private func loseAction() {
-        self.timer.invalidate()
-        self.timer = nil
+        if self.gameTimer != nil {
+            self.gameTimer.invalidate()
+            self.gameTimer = nil
+        }
         
 //        let vc: LoseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(format:"LoseViewController_%@", PMIDataSource.defaultDataSource.language.prefixFromLanguage())) as! LoseViewController
 //
@@ -205,7 +234,6 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier: String = "collectionViewCellIdentifier"
-        
         let cell: CardCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! CardCollectionViewCell
         cell.setCardModel(model: collectionViewDataSourceArray[indexPath.row])
         return cell
@@ -234,16 +262,36 @@ extension MutableCollection {
     }
 }
 
+extension MemoryGameViewController : GamePopupViewControllerDelegate {
+    
+    func gamePopupDidFinish(_ vc: GamePopupViewController) {
+        vc.dismiss(animated: true) {
+            self.winAction()
+        }
+    }
+    
+}
+
+extension MemoryGameViewController: CoachMarksViewControllerDelegate {
+    
+    func coachMarksViewControllerDidFinish(_ vc: CoachMarksViewController) {
+        vc.dismiss(animated: true) {
+            self.showAllItemsUnflipped()
+        }
+    }
+    
+}
+
 extension Sequence {
     /// Returns an array with the contents of this sequence, shuffled.
     func shuffled() -> [Element] {
         var result = Array(self)
 //        result.shuffle()
-//        result.swapAt(0, 7)
-//        result.swapAt(2, 4)
-//        result.swapAt(3, 6)
-//        result.swapAt(4, 7)
-//        result.swapAt(5, 6)
+        result.swapAt(0, 7)
+        result.swapAt(2, 4)
+        result.swapAt(3, 6)
+        result.swapAt(4, 7)
+        result.swapAt(5, 6)
         
         return result
     }

@@ -1,42 +1,42 @@
  [
   {
   "group_id": 0,
-  "ar_image": "ar_N1",
+  "ar_image": "card_checkmark_ar",
   "fr_image": "card_checkmark_fr",
   },
   {
   "group_id": 0,
-  "ar_image": "ar_N1",
+  "ar_image": "card_checkmark_ar",
   "fr_image": "card_checkmark_fr",
   },
   {
   "group_id": 1,
-  "ar_image": "ar_burning",
+  "ar_image": "card_cup_ar",
   "fr_image": "card_cup",
   },
   {
   "group_id": 1,
-  "ar_image": "ar_burning",
+  "ar_image": "card_cup_ar",
   "fr_image": "card_cup",
   },
   {
   "group_id": 2,
-  "ar_image": "ar_innovation",
+  "ar_image": "card_leaf_ar",
   "fr_image": "card_leaf_fr",
   },
   {
   "group_id": 2,
-  "ar_image": "ar_innovation",
+  "ar_image": "card_leaf_ar",
   "fr_image": "card_leaf_fr",
   },
   {
   "group_id": 3,
-  "ar_image": "ar_quality",
+  "ar_image": "card_malboro_ar",
   "fr_image": "card_malboro",
   },
   {
   "group_id": 3,
-  "ar_image": "ar_quality",
+  "ar_image": "card_malboro_ar",
   "fr_image": "card_malboro",
   },
 ]
