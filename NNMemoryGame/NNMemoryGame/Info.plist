@@ -27,6 +27,7 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>YouDecideN-LayerOne.ttf</string>
 		<string>MyriadPro-Bold.otf</string>
 		<string>YouDecideN-Layer_Four.ttf</string>
 	</array>

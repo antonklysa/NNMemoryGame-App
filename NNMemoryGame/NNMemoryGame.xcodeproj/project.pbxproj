@@ -18,7 +18,6 @@
 		3AA1EEA220D8185C00CD4C2E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA120D8185C00CD4C2E /* Card.swift */; };
 		3AA1EEA620D819DD00CD4C2E /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */; };
 		6B031AF220DC13BD00A04F77 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */; };
-		6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */; };
 		6B031B0020DC192E00A04F77 /* WinTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */; };
 		6B031B0120DC192E00A04F77 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B031AFD20DC192E00A04F77 /* LoseViewController.swift */; };
 		6B137F5420DAAE1700F3F289 /* ChooseLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */; };
@@ -27,6 +26,7 @@
 		6B92098A223BE81300FB6F8B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B920989223BE81300FB6F8B /* AppSettings.swift */; };
 		6B92098D223BEE1300FB6F8B /* TuDecidePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92098C223BEE1300FB6F8B /* TuDecidePopupViewController.swift */; };
 		6B920990223BEE2500FB6F8B /* CongratulationsWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92098F223BEE2500FB6F8B /* CongratulationsWinViewController.swift */; };
+		6B920995223BF73500FB6F8B /* YouDecideN-LayerOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B920994223BF73500FB6F8B /* YouDecideN-LayerOne.ttf */; };
 		9CAD0B92D85F34B6D1EA560C /* Pods_NNMemoryGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,6 @@
 		3AA1EEA120D8185C00CD4C2E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3AA1EEA520D819DD00CD4C2E /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
-		6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YouDecideN-LayerOne.ttf"; sourceTree = "<group>"; };
 		6B031AFB20DC192E00A04F77 /* WinTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinTextViewController.swift; sourceTree = "<group>"; };
 		6B031AFD20DC192E00A04F77 /* LoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		6B137F5320DAAE1700F3F289 /* ChooseLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		6B920989223BE81300FB6F8B /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		6B92098C223BEE1300FB6F8B /* TuDecidePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuDecidePopupViewController.swift; sourceTree = "<group>"; };
 		6B92098F223BEE2500FB6F8B /* CongratulationsWinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsWinViewController.swift; sourceTree = "<group>"; };
+		6B920994223BF73500FB6F8B /* YouDecideN-LayerOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YouDecideN-LayerOne.ttf"; path = "../../../../scratch/Scratch/Resources/YouDecideN-LayerOne.ttf"; sourceTree = "<group>"; };
 		9577688EBE9A760C77C222EB /* Pods_NNMemoryGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NNMemoryGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				6B031AF120DC13BD00A04F77 /* MyriadPro-Bold.otf */,
-				6B031AF820DC180800A04F77 /* YouDecideN-LayerOne.ttf */,
+				6B920994223BF73500FB6F8B /* YouDecideN-LayerOne.ttf */,
 				3A5A8CE920D8D9BC008643DB /* package_json.json */,
 			);
 			path = Resources;
@@ -313,8 +313,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B031AF920DC180900A04F77 /* YouDecideN-LayerOne.ttf in Resources */,
 				3AA1EE8F20D8147800CD4C2E /* LaunchScreen.storyboard in Resources */,
+				6B920995223BF73500FB6F8B /* YouDecideN-LayerOne.ttf in Resources */,
 				3AA1EE8C20D8147800CD4C2E /* Assets.xcassets in Resources */,
 				3AA1EE8A20D8147700CD4C2E /* Main.storyboard in Resources */,
 				3A5A8CEA20D8D9BC008643DB /* package_json.json in Resources */,
