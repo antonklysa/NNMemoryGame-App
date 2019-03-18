@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AppearanceTheme" representedClassName="AppearanceTheme" syncable="YES">
+        <attribute name="backgroundImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carouselBorderColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="endButtonImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="homeImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startButtonImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="campaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="theme" inverseEntity="Campaign" syncable="YES"/>
+    </entity>
+    <entity name="Campaign" representedClassName="Campaign" syncable="YES">
+        <attribute name="applicationType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hostessId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activeTouchpoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Touchpoint" inverseName="activeCampaign" inverseEntity="Touchpoint" syncable="YES"/>
+        <relationship name="theme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AppearanceTheme" inverseName="campaign" inverseEntity="AppearanceTheme" syncable="YES"/>
+        <relationship name="touchpoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Touchpoint" inverseName="campaign" inverseEntity="Touchpoint" syncable="YES"/>
+    </entity>
+    <entity name="Gift" representedClassName="Gift" syncable="YES">
+        <attribute name="giftID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="gifts" inverseEntity="Scenario" syncable="YES"/>
+        <relationship name="scenarios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GiftScenario" inverseName="gift" inverseEntity="GiftScenario" syncable="YES"/>
+    </entity>
+    <entity name="GiftScenario" representedClassName="GiftScenario" syncable="YES">
+        <attribute name="distributed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distributionTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="queuePosition" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="gift" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Gift" inverseName="scenarios" inverseEntity="Gift" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="giftScenarios" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="Scenario" representedClassName="Scenario" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="giftRemain" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="levelName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="premiumsWonThisSession" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scenarioId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scenarioImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scenarioName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activeTouchpoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Touchpoint" inverseName="activeScenario" inverseEntity="Touchpoint" syncable="YES"/>
+        <relationship name="gifts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Gift" inverseName="scenario" inverseEntity="Gift" syncable="YES"/>
+        <relationship name="giftScenarios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GiftScenario" inverseName="scenario" inverseEntity="GiftScenario" syncable="YES"/>
+        <relationship name="touchpoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Touchpoint" inverseName="scenarios" inverseEntity="Touchpoint" syncable="YES"/>
+    </entity>
+    <entity name="Touchpoint" representedClassName="Touchpoint" syncable="YES">
+        <attribute name="tochpointName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="touchpointId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="touchpointImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activeCampaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="activeTouchpoint" inverseEntity="Campaign" syncable="YES"/>
+        <relationship name="activeScenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="activeTouchpoint" inverseEntity="Scenario" syncable="YES"/>
+        <relationship name="campaign" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campaign" inverseName="touchpoints" inverseEntity="Campaign" syncable="YES"/>
+        <relationship name="scenarios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Scenario" inverseName="touchpoint" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppearanceTheme" positionX="-126" positionY="-342" width="128" height="135"/>
+        <element name="Campaign" positionX="-342" positionY="-243" width="128" height="165"/>
+        <element name="Gift" positionX="-146" positionY="198" width="128" height="135"/>
+        <element name="GiftScenario" positionX="133" positionY="198" width="128" height="120"/>
+        <element name="Scenario" positionX="-126" positionY="-108" width="128" height="210"/>
+        <element name="Touchpoint" positionX="-542" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>
