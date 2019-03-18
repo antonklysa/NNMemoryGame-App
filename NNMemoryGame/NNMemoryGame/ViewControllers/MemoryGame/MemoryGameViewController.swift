@@ -54,8 +54,8 @@ class MemoryGameViewController: BaseViewController, UICollectionViewDelegate, UI
         
         //setup collection view layout
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 25
+        layout.minimumInteritemSpacing = 35
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.collectionViewLayout = layout
         collectionView.reloadData()
