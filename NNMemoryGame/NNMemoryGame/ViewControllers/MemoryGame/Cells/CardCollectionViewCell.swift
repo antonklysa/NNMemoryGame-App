@@ -52,7 +52,7 @@ class CardCollectionViewCell: UICollectionViewCell {
             newImage.image = UIImage(named: (LocalizationManagers.isArabic() ? cardModel.ar_image : cardModel.fr_image)!)
         } else if onCellState == .close {
             let isSoft = PMISessionManager.defaultManager.packChoice == PackChoice.choice0
-            newImage.image = UIImage.init(named: isSoft ? "closed_card_image" : "closed_card_image_soft")
+            newImage.image = UIImage.init(named: isSoft ? "closed_card_image_soft" : "closed_card_image")
         }
         
         UIView.transition(from: currentImage, to: newImage, duration: time, options: options) { (bool) in
