@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
-    
-    static private let closedStringImageName: String = "closed_card_image"
-    
+  
     enum CellState {
         case open
         case close
@@ -26,7 +24,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     final func setCardModel(model: Card) {
         cardModel = model
-        currentImage.image = UIImage(named: CardCollectionViewCell.closedStringImageName)
+//        currentImage.image = UIImage(named: CardCollectionViewCell.closedStringImageName)
+        let isSoft = PMISessionManager.defaultManager.packChoice == PackChoice.choice0
+        currentImage.image = UIImage.init(named: isSoft ? "closed_card_image" : "closed_card_image_soft")
     }
     
     override func awakeFromNib() {
@@ -51,7 +51,8 @@ class CardCollectionViewCell: UICollectionViewCell {
         if onCellState == .open {
             newImage.image = UIImage(named: (LocalizationManagers.isArabic() ? cardModel.ar_image : cardModel.fr_image)!)
         } else if onCellState == .close {
-            newImage.image = UIImage.init(named: CardCollectionViewCell.closedStringImageName)
+            let isSoft = PMISessionManager.defaultManager.packChoice == PackChoice.choice0
+            newImage.image = UIImage.init(named: isSoft ? "closed_card_image" : "closed_card_image_soft")
         }
         
         UIView.transition(from: currentImage, to: newImage, duration: time, options: options) { (bool) in

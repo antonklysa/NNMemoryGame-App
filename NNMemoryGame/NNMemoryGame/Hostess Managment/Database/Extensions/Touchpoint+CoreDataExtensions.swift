@@ -32,7 +32,7 @@ extension Touchpoint {
     func scenarioNamesForPackChoice(_ packChoice: PackChoice, isPOS: Bool) -> [String] {
       var scenarioNames: [String] = []
       if isPOS {
-        if packChoice == .choice0 {
+        if packChoice == .choice1 {
           scenarioNames  = ["Pos-box-stick",
                             "Pos-box-one-pack",
                             "Pos-box-two-packs"]
@@ -42,7 +42,7 @@ extension Touchpoint {
                             "Pos-soft-two-packs"]
         }
       } else {
-        if packChoice == .choice0 {
+        if packChoice == .choice1 {
           scenarioNames  = ["Rural-soft-stick",
                             "Rural-soft-one-pack",
                             "Rural-soft-two-packs",
