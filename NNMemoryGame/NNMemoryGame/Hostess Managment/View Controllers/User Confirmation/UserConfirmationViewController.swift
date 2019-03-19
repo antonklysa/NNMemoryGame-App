@@ -56,7 +56,7 @@ class UserConfirmationViewController: UIViewController {
     }
     
     @IBAction func confirmButttonAction(_ sender: Any) {
-        UIApplication.shared.keyWindow!.rootViewController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TouchPointsSelectionViewController"))
+        UIApplication.shared.keyWindow!.rootViewController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PackChoiceViewController"))
     }
     
 }

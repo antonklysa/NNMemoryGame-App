@@ -11,11 +11,18 @@ import Alamofire
 import SwiftyJSON
 import Alamofire_SwiftyJSON
 
+enum PackChoice {
+  case choice0
+  case choice1
+}
+
 class PMISessionManager: SessionManager {
     
 //    let baseURL: String = "http://pmanager.ozeapps.com/"
     let baseURL: String = "http://139.162.233.112/"
 
+    var packChoice: PackChoice!
+  
     var hostessId : String? {
         get {
             let value: String? =  UserDefaults.standard.object(forKey: "hostessId") as? String
@@ -91,7 +98,7 @@ class PMISessionManager: SessionManager {
     
     
     static func teamName() -> String {
-        return "scratch"
+        return "memory"
     }
     
     func login(login : String, password: String, completion:@escaping(NSError?) -> ()) {
