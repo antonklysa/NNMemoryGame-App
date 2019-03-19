@@ -26,7 +26,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         cardModel = model
 //        currentImage.image = UIImage(named: CardCollectionViewCell.closedStringImageName)
         let isSoft = PMISessionManager.defaultManager.packChoice == PackChoice.choice0
-        currentImage.image = UIImage.init(named: isSoft ? "closed_card_image" : "closed_card_image_soft")
+        currentImage.image = UIImage.init(named: isSoft ? "closed_card_image_soft" : "closed_card_image")
     }
     
     override func awakeFromNib() {
