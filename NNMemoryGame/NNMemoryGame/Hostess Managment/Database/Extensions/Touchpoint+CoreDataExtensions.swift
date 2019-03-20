@@ -42,7 +42,7 @@ extension Touchpoint {
                             "Pos-soft-two-packs"]
         }
       } else {
-        if packChoice == .choice1 {
+        if packChoice == .choice0 {
           scenarioNames  = ["Rural-soft-stick",
                             "Rural-soft-one-pack",
                             "Rural-soft-two-packs",

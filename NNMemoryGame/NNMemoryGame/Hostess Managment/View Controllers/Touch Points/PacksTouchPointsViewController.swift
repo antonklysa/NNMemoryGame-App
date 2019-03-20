@@ -97,7 +97,7 @@ extension PacksTouchPointsViewController : UICollectionViewDelegate {
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
       } else {
-        let vc : MemoryGameViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MemoryGameViewController") as! MemoryGameViewController
+        let vc : ChooseLanguageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseLanguageViewController") as! ChooseLanguageViewController
         self.navigationController?.pushViewController(vc, animated: true)
       }
     }
