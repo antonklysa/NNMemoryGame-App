@@ -23,15 +23,7 @@ class CongratulationsWinViewController: BaseViewController {
     }
 
     @objc func tapGestureCatched(_ gesture: UITapGestureRecognizer) {
-//        self.navigationController?.popToRootViewController(animated: true)
-      
-        let vc: WinViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WinViewController") as! WinViewController
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.fade
-        self.navigationController?.view.layer.add(transition, forKey: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
