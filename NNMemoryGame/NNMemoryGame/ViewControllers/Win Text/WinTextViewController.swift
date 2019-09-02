@@ -2,8 +2,8 @@
 //  WinTextViewController.swift
 //  NNGames
 //
-//  Created by Yaroslav Brekhunchenko on 6/15/18.
-//  Copyright © 2018 Yaroslav Brekhunchenko. All rights reserved.
+//  Created by  on 6/15/18.
+//  Copyright © 2018 . All rights reserved.
 //
 
 import UIKit

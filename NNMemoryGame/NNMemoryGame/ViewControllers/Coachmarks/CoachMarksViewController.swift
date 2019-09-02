@@ -2,8 +2,8 @@
 //  CoachMarksViewController.swift
 //  Scratch
 //
-//  Created by Yaroslav Brekhunchenko on 2/17/19.
-//  Copyright © 2019 Yaroslav Brekhunchenko. All rights reserved.
+//  Created by  on 2/17/19.
+//  Copyright © 2019 . All rights reserved.
 //
 
 import UIKit

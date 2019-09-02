@@ -2,8 +2,8 @@
 //  ChooseLanguageViewController.swift
 //  NNMemoryGame
 //
-//  Created by Yaroslav Brekhunchenko on 6/20/18.
-//  Copyright © 2018 Anton Klysa. All rights reserved.
+//  Created by  on 6/20/18.
+//  Copyright © 2018 . All rights reserved.
 //
 
 import UIKit

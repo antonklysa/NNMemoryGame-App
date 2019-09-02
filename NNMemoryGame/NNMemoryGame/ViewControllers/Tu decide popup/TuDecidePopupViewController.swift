@@ -2,8 +2,8 @@
 //  TuDecidePopupViewController.swift
 //  PuzzleGame2019
 //
-//  Created by Yaroslav Brekhunchenko on 3/4/19.
-//  Copyright © 2019 Yaroslav Brekhunchenko. All rights reserved.
+//  Created by  on 3/4/19.
+//  Copyright © 2019 . All rights reserved.
 //
 
 import UIKit

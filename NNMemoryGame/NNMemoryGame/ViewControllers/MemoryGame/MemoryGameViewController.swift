@@ -2,8 +2,8 @@
 //  MemoryGameViewController.swift
 //  NNMemoryGame
 //
-//  Created by Anton Klysa on 6/18/18.
-//  Copyright © 2018 Anton Klysa. All rights reserved.
+//  Created by  on 6/18/18.
+//  Copyright © 2018 . All rights reserved.
 //
 
 import Foundation
